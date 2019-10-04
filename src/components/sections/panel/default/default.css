@@ -1,0 +1,61 @@
+.welcome{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+}
+.welcome .container{
+    flex: 1 1 0;
+    overflow-y: auto;
+}
+.welcome .container h3{
+    font-weight: 300;
+    color:#333;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 1.44rem;
+    line-height: 2rem;
+}
+.welcome .btn-groups{
+    padding: 0 4rem;
+}
+.welcome .btn-groups{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+.welcome-row{
+    display: flex;
+    justify-content: space-around;
+}
+.welcome-row .btn{
+    margin-top: 2rem;
+}
+.welcome-row .btn:hover {
+    color: #1f51cf;
+    cursor: pointer;
+}
+.welcome-row .btn img:hover {
+    opacity: .75;
+}
+.welcome .buttonimage img {
+    height: 4.5rem;
+    width: 10rem;
+    object-fit: cover;
+}
+.welcome .buttontext {
+    text-align: center;
+}
+.welcome .or{
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+.welcome .or .or-link{
+    color: #1f51cf;
+}
+.welcome .or .or-link a{
+    text-decoration: none;
+}

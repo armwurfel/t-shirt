@@ -4,7 +4,7 @@ import './design.css'
 class Design extends Component {
     render() {
         return (
-            <div>
+            <div className="canvas">
                 
             </div>
         )

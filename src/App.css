@@ -1,7 +1,12 @@
-.app {
+.app > .wrapper{
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   width: 100%;
   height: 100vh;
+  min-height: 100vh;
+}
+
+..app > .wrapper .main {
+  flex-grow: 1;
+  background: #331E4D;
 }

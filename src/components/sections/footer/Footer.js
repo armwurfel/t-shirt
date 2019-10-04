@@ -8,12 +8,14 @@ class Footer extends Component {
         return (
             <footer>
                 <div>
-                    <Button text="Add Products" />
-                    <span> img </span>
-                </div>
-                <div>
-                    <Button text="Get Price" />
-                    <Button text="Save | Share" />
+                    <div>
+                        <Button text="Add Products" />
+                        <span> img </span>
+                    </div>
+                    <div>
+                        <Button text="Get Price" />
+                        <Button text="Save | Share" />
+                    </div>
                 </div>
             </footer>
         )

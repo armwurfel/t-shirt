@@ -1,0 +1,18 @@
+button{
+    display: inline-flex;
+    align-items: center;
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: .833rem;
+    text-transform: capitalize;
+    border-radius: 6px;
+    border: 1px solid #1f51cf;
+    margin-left: 1rem;
+    background: transparent;
+    transition: .1s all ease-in-out;
+}
+button:hover {
+    color: #fff;
+    fill:#1f51cf;
+    background-color:#1f51cf;
+}

@@ -29,6 +29,18 @@
     justify-content: center;
     overflow: hidden;
 }
+.btn-group a.active .button {
+    background-color: white;
+    border-left: #fa3c00 3px solid;
+    border-right-color: #d8d8d8;
+    color:#333;
+}
+.btn-group a.active .button svg {
+    fill: #333;
+}
+.btn-group a.active .button .button-text{
+    color: #333;
+}
 .btn-group .button:hover , .btn-group .button:hover svg{
     color: #e1e1e1;
     fill: #e1e1e1;
@@ -53,4 +65,5 @@
     text-transform: capitalize;
     font-size: .694rem;
     letter-spacing: 0;
+    color: #b7b7b7;
 }

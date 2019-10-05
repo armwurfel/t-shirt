@@ -33,6 +33,73 @@
     width: 100%;
     will-change: transform;
 }
+.panel .card{
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+.card-header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 0 .6rem;
+    font-size: .694rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    background-color: #f6f6f6;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+}
+.card-header h5{
+    color: #4a4a4a;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: .833rem;
+    font-weight: 300;
+}
+.card-back, .card-close{
+    flex: 0 0 auto;
+    position: relative;
+    user-select: none;
+    overflow: visible;
+    margin: 0 .5rem;
+    cursor: pointer;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-back, .btn-close{
+    text-align: center;
+}
+.card-header svg{
+    height: .9rem;
+    width: .9rem;
+    fill: #4a4a4a;
+    margin: 0 auto;
+}
+.card-title{
+    flex: 1 1 auto;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: .833rem;
+    font-weight: 300;
+}
 .canvas-container{
     overflow: visible;
     flex-direction: column;

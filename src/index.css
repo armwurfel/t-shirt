@@ -16,6 +16,7 @@ body {
     font-family: 'SharpSans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* color: #4a4a4a; */
 }
 
  *, ::before, ::after {
@@ -23,9 +24,9 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+a {
+  text-decoration: none;
+  color: #4a4a4a;
 }
 html {
   line-height: 1.15;

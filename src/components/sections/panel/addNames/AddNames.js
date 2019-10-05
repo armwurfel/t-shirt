@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './addnames'
+import CardHeader from '../../../utilitiesComponent/cardHeader/CardHeader';
+import './addnames.css'
 
 class AddNames extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="card">
+                 <CardHeader title="Add Names" />
             </div>
         )
     }

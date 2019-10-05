@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './addtext'
+import CardHeader from '../../../utilitiesComponent/cardHeader/CardHeader';
+
+import './addtext.css'
 
 class AddText extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="card">
+                 <CardHeader title="Add Text" />
             </div>
         )
     }

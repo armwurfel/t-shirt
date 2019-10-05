@@ -47,6 +47,7 @@
 }
 .welcome .buttontext {
     text-align: center;
+    font-size: .833rem;
 }
 .welcome .or{
     text-align: center;
@@ -58,4 +59,5 @@
 }
 .welcome .or .or-link a{
     text-decoration: none;
+    color: #1f51cf;
 }

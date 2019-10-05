@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import './prodcutcolors.css';
+import CardHeader from '../../../utilitiesComponent/cardHeader/CardHeader';
+
+import './productcolors.css';
 
 class ProductColors extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="card">
+                 <CardHeader title="Product Colors" />
             </div>
         )
     }

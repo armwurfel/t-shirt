@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './default.css'
 
 class Default extends Component {
@@ -10,22 +12,30 @@ class Default extends Component {
                     <div className="btn-groups">
                         <div class="welcome-row">
                             <div class="btn">
-                                <div class="buttonimage"><img src="assets/images/addtext.svg" alt="addtext" /></div>
-                                <div class="buttontext">Add Text</div>
+                                <Link to="/addText">
+                                    <div class="buttonimage"><img src="assets/images/addtext.svg" alt="addtext" /></div>
+                                    <div class="buttontext">Add Text</div>
+                                </Link>
                             </div>
                             <div class="btn">
-                                <div class="buttonimage"><img src="assets/images/addart.svg" alt="addart" /></div>
-                                <div class="buttontext">Add Art</div>
+                                <Link to="/addArt">
+                                    <div class="buttonimage"><img src="assets/images/addart.svg" alt="addart" /></div>
+                                    <div class="buttontext">Add Art</div>
+                                </Link>
                             </div>
                         </div>
                         <div class="welcome-row">
                             <div class="btn">
-                                <div class="buttonimage"><img src="assets/images/upload.svg" alt="upload" /></div>
-                                <div class="buttontext">Upload</div>
+                                <Link to="/uploadForm">
+                                    <div class="buttonimage"><img src="assets/images/upload.svg" alt="upload" /></div>
+                                    <div class="buttontext">Upload</div>
+                                </Link>
                             </div>
                             <div class="btn">
-                                <div class="buttonimage"><img src="assets/images/product.svg" alt="product" /></div>
-                                <div class="buttontext">Change Product</div>
+                                <Link to="/productCatalog">
+                                    <div class="buttonimage"><img src="assets/images/product.svg" alt="product" /></div>
+                                    <div class="buttontext">Change Product</div>
+                                </Link>
                             </div>
                         </div>
                     </div>

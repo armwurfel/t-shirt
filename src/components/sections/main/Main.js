@@ -9,6 +9,7 @@ import Upload from '../panel/upload/Upload';
 import ProductColors from '../panel/productColors/ProductColors';
 import AddNotes from '../panel/addNotes/AddNotes';
 import DesignOption from '../designOption/DesignOption';
+import Design from '../design/Design';
 import './main.css';
 
 class Main extends Component {
@@ -51,6 +52,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
+                            <Design />
                             <DesignOption />
                         </div>
                     </div>

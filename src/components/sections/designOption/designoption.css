@@ -1,0 +1,52 @@
+.design-option{
+    bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    margin: 1.375rem;
+    user-select: none;
+    pointer-events: none;
+}
+.design-option-change-view{
+    background-color: rgba(246,246,246,.9);
+    margin-bottom: .5rem;
+    border-radius: .25rem;
+}
+.design-menu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 0 .6rem;
+}
+.design-option-menu {
+    background-color: rgba(246,246,246,.9);
+    border-radius: .25rem;
+    flex-flow: column nowrap;
+}
+.design-option-change-view .design-option-menu{
+    margin-bottom: 0;
+}
+.design-option-change-view .design-option-menu :last-child {
+    padding-bottom: .5rem;
+}
+.design-option-changeviewbutto{
+    margin: .5rem 0 0;
+}
+.design-option-label4{
+    font-size: .579rem;
+    font-weight: 500;
+}
+
+.menubutton{
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}

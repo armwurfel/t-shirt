@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/t-shirt/static/css/main.b16e6f13.chunk.css",
-    "main.js": "/t-shirt/static/js/main.22ae806d.chunk.js",
-    "main.js.map": "/t-shirt/static/js/main.22ae806d.chunk.js.map",
+    "main.js": "/t-shirt/static/js/main.47926c5b.chunk.js",
+    "main.js.map": "/t-shirt/static/js/main.47926c5b.chunk.js.map",
     "runtime-main.js": "/t-shirt/static/js/runtime-main.da1e05c4.js",
     "runtime-main.js.map": "/t-shirt/static/js/runtime-main.da1e05c4.js.map",
     "static/js/2.9d55aa89.chunk.js": "/t-shirt/static/js/2.9d55aa89.chunk.js",
     "static/js/2.9d55aa89.chunk.js.map": "/t-shirt/static/js/2.9d55aa89.chunk.js.map",
     "index.html": "/t-shirt/index.html",
-    "precache-manifest.de338e3af7c932d16cf6528831f6a9ba.js": "/t-shirt/precache-manifest.de338e3af7c932d16cf6528831f6a9ba.js",
+    "precache-manifest.e9d1bcbeb10761a8e2179743753f1204.js": "/t-shirt/precache-manifest.e9d1bcbeb10761a8e2179743753f1204.js",
     "service-worker.js": "/t-shirt/service-worker.js",
     "static/css/main.b16e6f13.chunk.css.map": "/t-shirt/static/css/main.b16e6f13.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.da1e05c4.js",
     "static/js/2.9d55aa89.chunk.js",
     "static/css/main.b16e6f13.chunk.css",
-    "static/js/main.22ae806d.chunk.js"
+    "static/js/main.47926c5b.chunk.js"
   ]
 }

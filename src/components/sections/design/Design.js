@@ -27,7 +27,7 @@ class Design extends Component {
                         <div className="product">
                             <div>
                                 <span>
-                                    <img className="product-photo" src="/assets/images/front_large_extended.png" alt="product" />
+                                    <img className="product-photo" src="./assets/images/front_large_extended.png" alt="product" />
                                 </span>
                             </div>
                             <div className="canvascontainer-pagecontainer-design">

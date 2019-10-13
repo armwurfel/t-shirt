@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/armwurfel/t-shirt/static/css/main.b16e6f13.chunk.css",
+    "main.js": "/armwurfel/t-shirt/static/js/main.1a16c1c5.chunk.js",
+    "main.js.map": "/armwurfel/t-shirt/static/js/main.1a16c1c5.chunk.js.map",
+    "runtime-main.js": "/armwurfel/t-shirt/static/js/runtime-main.8276633f.js",
+    "runtime-main.js.map": "/armwurfel/t-shirt/static/js/runtime-main.8276633f.js.map",
+    "static/js/2.9d55aa89.chunk.js": "/armwurfel/t-shirt/static/js/2.9d55aa89.chunk.js",
+    "static/js/2.9d55aa89.chunk.js.map": "/armwurfel/t-shirt/static/js/2.9d55aa89.chunk.js.map",
+    "index.html": "/armwurfel/t-shirt/index.html",
+    "precache-manifest.d6307e44730cb38f462d1b71b6bb73be.js": "/armwurfel/t-shirt/precache-manifest.d6307e44730cb38f462d1b71b6bb73be.js",
+    "service-worker.js": "/armwurfel/t-shirt/service-worker.js",
+    "static/css/main.b16e6f13.chunk.css.map": "/armwurfel/t-shirt/static/css/main.b16e6f13.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8276633f.js",
+    "static/js/2.9d55aa89.chunk.js",
+    "static/css/main.b16e6f13.chunk.css",
+    "static/js/main.1a16c1c5.chunk.js"
+  ]
+}

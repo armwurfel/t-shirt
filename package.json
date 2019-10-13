@@ -1,8 +1,11 @@
 {
   "name": "t-shirt",
+  "homepage": "https://armwurfel.github.io/t-shirt/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
+    "global": "^4.4.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-rnd": "^10.1.1",
@@ -13,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

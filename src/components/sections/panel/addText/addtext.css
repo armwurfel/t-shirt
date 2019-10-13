@@ -1,0 +1,123 @@
+.card-content-main{
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.textcard-container{
+    display: block;
+    padding: 0;
+    width: 100%;
+}
+.textinput{
+    display: flex;
+    flex-flow: column;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 1rem;
+    color:#1a1a1a;
+    font-size: .9rem;
+    background: transparent;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+}
+
+.textinput-textarea-container{
+    align-items: center;
+    border: 1px solid #b7b7b7;
+    width: 100%;
+}
+.textinput-textarea{
+    background: transparent;
+    border: 0;
+    color: inherit;
+    outline-width: 0;
+    padding: 1rem;
+    resize: none;
+    text-align: center;
+    white-space: pre;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    min-height: 3rem;
+}
+.textinput-tools{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+.textinput-tools button{
+    padding: .75rem 2.8rem;
+    width: auto;
+}
+.textinput-tools button:hover {
+    background-color: 
+    #1840a3;
+}
+.utilitytools{
+    display: flex;
+    flex-flow: column;
+    width: auto;
+    flex: 0 0 auto;
+    padding: 1rem;
+    background-color: #f6f6f6;
+    margin-bottom: .5rem;
+}
+.utilitytools-row{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+.toolsmenu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.toolsmenubutton svg {
+    fill: #4a4a4a;
+    height: 2rem;
+    width: 3rem;
+}
+.toolsmenubutton{
+    background-color: #fff;
+    border: 1px solid #b7b7b7;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 3rem;
+}
+.toolsmenu-buttons{
+    display: flex;
+    align-items: center;
+}
+.toolsmenubutton:last-of-type {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+.toolsmenubutton:first-of-type {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.toolsmenubutton.isdisabled svg {
+    opacity: .3;
+    pointer-events: none;
+}
+.toolsmenu-label{
+    font-size: .579rem;
+    padding-top: .5rem;
+    color: #4a4a4a;
+    text-align: center;
+}
+.utilitytools .layeringtool .toolsmenubutton svg {
+    height: 1.4rem;
+    width: 2.1rem;
+}

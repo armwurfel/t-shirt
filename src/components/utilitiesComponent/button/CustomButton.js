@@ -7,7 +7,7 @@ class CustomButton extends Component {
     }
     render() {
         return (
-            <button>
+            <button className={this.props.className}>
                 {this.props.text}
             </button>
         )

@@ -28,6 +28,12 @@ a {
   text-decoration: none;
   color: #4a4a4a;
 }
+html button, html input, html optgroup, html select, html textarea, body button, body input, body optgroup, body select, body textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
 html {
   line-height: 1.15;
 }
@@ -61,4 +67,10 @@ svg:not(:root) {
 }
 .d-none{
   display: none;
+}
+.bg-blue{
+  background-color:#1f51cf;
+}
+.txt-white{
+  color: white;
 }

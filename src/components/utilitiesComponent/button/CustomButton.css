@@ -9,7 +9,10 @@ button{
     border: 1px solid #1f51cf;
     margin-left: 1rem;
     background: transparent;
+    cursor: pointer;
     transition: .1s all ease-in-out;
+    font-family: 'SharpSans' !important;
+    font-weight: 500;
 }
 button:hover {
     color: #fff;

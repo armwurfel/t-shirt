@@ -6,6 +6,7 @@
   "dependencies": {
     "gh-pages": "^2.1.1",
     "global": "^4.4.0",
+    "rc-slider": "^8.7.1",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-rnd": "^10.1.1",

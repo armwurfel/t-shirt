@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import CardHeader from '../../../utilitiesComponent/cardHeader/CardHeader';
 import Button from '../../../utilitiesComponent/button/CustomButton';
+import Slider from 'rc-slider';
 
-import './addtext.css'
+import 'rc-slider/assets/index.css';
+import './addtext.css';
+
 
 class AddText extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sliderValueRotation: 0,
+        }
+    }
+    handleValueRotation = (sliderValueRotation) => {
+        this.setState({ sliderValueRotation });
+    }
     render() {
+        const { sliderValueRotation } = this.state;
         return (
             <div className="card">
                 <CardHeader title="Add Text" />
@@ -50,7 +63,7 @@ class AddText extends Component {
                                                     <svg id="_18-align-left_copy_2" data-name="18-align-left copy 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.98 38.98"><path class="cls-1" d="M10.1 25.88h18.79v2H10.1z"></path><path class="cls-1" d="M10.1 11.1h18.79v2H10.1z"></path><path class="cls-1" d="M10.1 18.49h11.27v2H10.1z"></path>
                                                     </svg>
                                                 </div>
-                                            <div class="toolsmenubutton isdisabled isActive">
+                                            <div class="toolsmenubutton isdisabled isactive">
                                                 <svg id="_19-align-center_copy" data-name="19-align-center copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.98 38.98"><path class="cls-1" d="M10.1 25.88h18.79v2H10.1z"></path><path class="cls-1" d="M10.1 11.1h18.79v2H10.1z"></path><path class="cls-1" d="M13.85 18.49h11.27v2H13.85z"></path>
                                                 </svg>
                                             </div>
@@ -62,7 +75,19 @@ class AddText extends Component {
                                         <div class="toolsmenu-label">Text Align</div>
                                     </div>
                                     </div>
-                                    <div className="utilitytools-row"></div>
+                                    <div className="utilitytools-row">
+                                        <div className="rotationtool">
+                                            <div className="rotationtool-label">Rotation</div>
+                                            <div className="rotationcontrol">
+                                                <Slider className="slider rotationcontrol-slider" 
+                                                    min={-180} 
+                                                    max={180} 
+                                                    defaultValue={sliderValueRotation}
+                                                    onChange={this.handleValueRotation} />
+                                                <input class="rotationcontrol-value" type="number" value={sliderValueRotation} />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -2,13 +2,25 @@ import React, { Component } from 'react';
 import './designoption.css';
 
 class DesignOption extends Component {
+    constructor() {
+        super();
+        this.state = {
+          front: true,
+          back: false
+        };
+      }
     render() {
         return (
             <div>
                 <div className="design-option-container">
                     <div className="design-option">
                         <div className="design-option-change-view">
-                            <div className="design-menu design-option-menu active">
+                            <div 
+                                onClick={() => {
+                                    this.props.handleImageFront(true);
+                                    this.props.handleImageBack(false);
+                                }}
+                                className={this.props.front === true ? "design-menu design-option-menu active" : "design-menu design-option-menu"}>
                                 <div className="design-option-changeviewbutton menubutton">
                                     <div className="design-option-changeView">
                                         <div>
@@ -20,7 +32,12 @@ class DesignOption extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="design-menu design-option-menu">
+                            <div 
+                                onClick={() => {
+                                    this.props.handleImageBack(true);
+                                    this.props.handleImageFront(false);
+                                }}
+                                className={this.props.back === true ? "design-menu design-option-menu active" : "design-menu design-option-menu"}>
                                 <div className="design-option-changeviewbutton menubutton">
                                     <div className="design-option-changeView">
                                         <div>

@@ -13,6 +13,19 @@ import Design from '../design/Design';
 import './main.css';
 
 class Main extends Component {
+    constructor() {
+        super();
+        this.state = {
+          front: true,
+          back: false
+        };
+      }
+      handleImageFront = (value) => {
+        this.setState({front: value});
+      };
+      handleImageBack = (value) => {
+        this.setState({back: value});
+      };
     render() {
         return (
             <section className="main">
@@ -52,8 +65,8 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design />
-                            <DesignOption />
+                            <Design front={this.state.front} back={this.state.back}/>
+                            <DesignOption  handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>
                 </Router>

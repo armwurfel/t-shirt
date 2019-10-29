@@ -27,7 +27,12 @@ class Design extends Component {
                         <div className="product">
                             <div>
                                 <span>
-                                    <img className="product-photo" src="./assets/images/front_large_extended.png" alt="product" />
+                                    {this.props.front === true ? 
+                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt="product" />
+                                    : ""}
+                                    {this.props.back === true ? 
+                                    <img className="product-photo" src="./assets/images/back_large_extended.png" alt="product" />
+                                    : ""}
                                 </span>
                             </div>
                             <div className="canvascontainer-pagecontainer-design">

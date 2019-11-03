@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Toolbar from '../toolbar/Toolbar';
 import Default from '../panel/default/Default';
 import AddText from '../panel/addText/AddText';
+import TextTools from '../panel/addText/textTools/TextTools';
+import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
 import AddNames from '../panel/addNames/AddNames';
 import Upload from '../panel/upload/Upload';
@@ -17,7 +19,9 @@ class Main extends Component {
         super();
         this.state = {
           front: true,
-          back: false
+          back: false,
+          value: "ARM",
+          font: 1
         };
       }
       handleImageFront = (value) => {
@@ -25,6 +29,12 @@ class Main extends Component {
       };
       handleImageBack = (value) => {
         this.setState({back: value});
+      };
+      handleTextFrontValue = (text) => {
+        this.setState({value: text});
+      };
+      handleChangeFont = (font) => {
+        this.setState({currentFont: font});
       };
     render() {
         return (
@@ -40,7 +50,16 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/addText"
-                                    component={AddText} 
+                                    component={() => (<AddText value={this.state.value} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                />
+                                <Route
+                                    path="/textTools"
+                                    component={() => (<TextTools value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                />
+                                <Route
+                                    path="/addText/selectFont"
+                                    component={() => (<Fonts handleChangeFont={this.handleChangeFont.bind(this)} />)}
+
                                 />
                                 <Route
                                     path="/addArt"
@@ -65,7 +84,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design front={this.state.front} back={this.state.back}/>
+                            <Design handleTextFrontValue={this.handleTextFrontValue.bind(this)} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption  handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

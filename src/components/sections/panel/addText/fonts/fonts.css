@@ -1,0 +1,40 @@
+.fontcategoryoverlay-listcontainer{
+    flex: 1 0 auto;
+    overflow: hidden auto;
+    position: relative;
+}
+.fontcategory-list{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: auto;
+    will-change: transform;
+}
+.fontlistitem{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+}
+.fontlistitem-font {
+    height: 40px;
+    filter: brightness(0);
+}
+.fontlistitem:hover .fontlistitem-font{
+    filter: brightness(100%);
+}
+.fontlistitem-font .foundryimage {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.fontlistitem-name {
+    margin: .25rem 0;
+    color: #949494;
+    text-transform: capitalize;
+}

@@ -1,21 +1,12 @@
 import React, { Component } from 'react';
-import { Rnd } from 'react-rnd';
+import DesignIcon from '../design/designIcon/DesignIcon';
 import './design.css'
 
-const style = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    border: "solid 1px #ddd",
-  };
 class Design extends Component {
     constructor() {
         super();
         this.state = {
-          width: 50,
-          height: 50,
-          x: 10,
-          y: 10,
+            
         };
       }
     
@@ -28,7 +19,7 @@ class Design extends Component {
                             <div>
                                 <span>
                                     {this.props.front === true ? 
-                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt="product" />
+                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt=" " />
                                     : ""}
                                     {this.props.back === true ? 
                                     <img className="product-photo" src="./assets/images/back_large_extended.png" alt="product" />
@@ -47,24 +38,7 @@ class Design extends Component {
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <Rnd
-                                        style={style}
-                                        size={{ width: this.state.width, height: this.state.height }}
-                                        position={{ x: this.state.x, y: this.state.y }}
-                                        onDragStop={(e, d) => {
-                                        this.setState({ x: d.x, y: d.y });
-                                        }}
-                                        bounds=".canvascontainer-pagecontainer-design"
-                                        onResizeStop={(e, direction, ref, delta, position) => {
-                                        this.setState({
-                                            width: ref.style.width,
-                                            height: ref.style.height,
-                                            ...position
-                                        });
-                                        }}
-                                    >
-                                        ARM
-                                    </Rnd>
+                                    <DesignIcon handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from '../../../history';
 import Toolbar from '../toolbar/Toolbar';
 import Default from '../panel/default/Default';
 import AddText from '../panel/addText/AddText';
@@ -39,7 +40,7 @@ class Main extends Component {
     render() {
         return (
             <section className="main">
-                <Router>
+                <Router history = {history}>
                     <div className="content-main">
                         <div className="menu-container">
                             <Toolbar />

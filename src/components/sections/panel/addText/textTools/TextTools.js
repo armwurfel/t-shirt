@@ -45,7 +45,7 @@ class TextOptions extends Component {
                                  onChange={    
                                     this.handleChangeText
                                 } 
-                                name="value" value={this.state.value && this.state.value ? this.state.value : this.props.value} placeholder="Enter text here" rows="1" type="text">
+                                name="value" value={this.state.value} placeholder="Enter text here" rows="1" type="text">
                                 </textarea>
                             </label>
                         </div>

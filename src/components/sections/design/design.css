@@ -80,3 +80,7 @@
     max-height: 100%;
     display: block;
 }
+
+.product-photo{
+    pointer-events: none;
+}

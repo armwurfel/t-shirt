@@ -11,11 +11,18 @@ class TextOptions extends Component {
         super(props);
         this.state = {
             sliderValueRotation: 0,
-            currentFont: this.props.font,
+            currentFont: 1,
             fontPath: "",
             value: this.props.value
         }
     }
+
+    static getDerivedStateFromProps(props, state) {
+        return {
+            currentFont: props.font
+        }
+    }
+
     handleValueRotation = (sliderValueRotation) => {
         this.setState({ sliderValueRotation });
     }
@@ -110,7 +117,7 @@ class TextOptions extends Component {
                     <div className="iconcardtool iconcardtool-font iconcardtool-clickable">
                         <div className="iconcardtool-title">Change Font</div>
                         <div className="iconcardtool-content">
-                            <img className="foundryimage" alt="font" draggable="false" src={this.findFontById( Fonts.data , this.state.currentFont )} />
+                            <img className="foundryimage" alt="font" draggable="false" src={this.findFontById( Fonts.data , this.state.currentFont && this.state.currentFont )} />
                         </div>
                         <div className="iconcardtool-chevron">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 11.4 20.1" ><path d="M10 20.1c-.4 0-.7-.1-1-.4L.4 11c-.3-.2-.4-.6-.4-1s.1-.7.4-1L9 .4c.5-.5 1.4-.5 2 0s.5 1.4 0 2L3.4 10l7.7 7.7c.5.5.5 1.4 0 2-.3.3-.7.4-1.1.4z"></path>

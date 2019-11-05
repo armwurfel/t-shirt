@@ -3,17 +3,20 @@
         {
             "Id": 1,
             "FontPath": "//www.customink.com/text/v1/gen?op[fnt]=Aachen-Bold&op[ht]=30&op[sf]=25&op[txt]=Aachen%20Bold&op[r]=31&op[g]=81&op[b]=207&op[a]=center&op[ro]=0&op[lr]=false",
-            "FontName": "Aachen Bold"
+            "FontName": "Aachen Bold",
+            "FontLinkText": "Aachen-Bold"
         },
         {
             "Id": 2,
             "FontPath": "//www.customink.com/text/v1/gen?op[fnt]=Aclonica&op[ht]=30&op[sf]=25&op[txt]=Aclonica&op[r]=31&op[g]=81&op[b]=207&op[a]=center&op[ro]=0&op[lr]=false",
-            "FontName": "Aclonica"
+            "FontName": "Aclonica",
+            "FontLinkText": "Aclonica"
         },
         {
             "Id": 3,
             "FontPath": "//www.customink.com/text/v1/gen?op[fnt]=ActionJackson01&op[ht]=30&op[sf]=25&op[txt]=Action%20Jackson&op[r]=31&op[g]=81&op[b]=207&op[a]=center&op[ro]=0&op[lr]=false",
-            "FontName": "Action Jackson"
+            "FontName": "Action Jackson",
+            "FontLinkText": "ActionJackson01"
         }
     ]
 }

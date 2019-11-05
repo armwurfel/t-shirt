@@ -39,7 +39,7 @@ class Design extends Component {
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <DesignIcon handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                 </div>
                             </div>
                         </div>

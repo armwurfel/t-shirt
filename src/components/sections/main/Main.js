@@ -35,7 +35,7 @@ class Main extends Component {
         this.setState({value: text});
       };
       handleChangeFont = (font) => {
-        this.setState({currentFont: font});
+        this.setState({font: font});
       };
     render() {
         return (
@@ -85,7 +85,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design handleTextFrontValue={this.handleTextFrontValue.bind(this)} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption  handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

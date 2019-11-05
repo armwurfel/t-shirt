@@ -47,7 +47,7 @@ class Search extends Component {
                     options={options}
                     isSearchable={true}
                     components={{ ValueContainer }}
-                    placeholder="Search Fonts"
+                    placeholder={this.props.placeholder}
                     classNamePrefix="search"
                 />
             </div>

@@ -1,0 +1,47 @@
+.artpage{
+    background-color: #fff;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 100%;
+    width: auto;
+}
+.artpage-list-flex-container{
+    flex: 1 1 auto;
+    position: relative;
+}
+.artpage-list-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.artpage-list-scrolling-container {
+    position: relative;
+    height: 800px;
+    width: 539px;
+    overflow: auto;
+    will-change: transform;
+    direction: ltr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.artcategorylist-row{
+    width: 50%;
+    height: 126px;
+    padding: 0 0 1% 1%;
+}
+.artcategorylist-item-root{
+    background: center center no-repeat;
+    background-image: none;
+    background-size: auto;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow-y: hidden;
+    text-align: center;
+}

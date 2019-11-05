@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "Id": 1,
+            "ArtCatName": "cat1"
+        },
+        {
+            "Id": 2,
+            "ArtCatName": "cat2"
+        }
+    ]
+}

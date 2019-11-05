@@ -7,6 +7,7 @@ import AddText from '../panel/addText/AddText';
 import TextTools from '../panel/addText/textTools/TextTools';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
+import Cat from '../panel/addArt/cat/Cat';
 import AddNames from '../panel/addNames/AddNames';
 import Upload from '../panel/upload/Upload';
 import ProductColors from '../panel/productColors/ProductColors';
@@ -60,11 +61,14 @@ class Main extends Component {
                                 <Route
                                     path="/addText/selectFont"
                                     component={() => (<Fonts handleChangeFont={this.handleChangeFont.bind(this)} />)}
-
                                 />
                                 <Route
                                     path="/addArt"
                                     component={AddArt} 
+                                />
+                                <Route
+                                    path="/addArt/cat"
+                                    component={Cat} 
                                 />
                                 <Route
                                     path="/namesAndNumbers"

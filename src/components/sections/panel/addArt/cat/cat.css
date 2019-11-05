@@ -1,0 +1,29 @@
+.artcategorylist-listcontainer {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    align-items: center;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    line-height: 2rem;
+    margin: 0;
+}
+.artcategorylist-item {
+    display: flex;
+    align-items: center;
+    padding: .625rem 0;
+    cursor: pointer;
+    color:  #333;
+    text-align: center;
+    width: 100%;    
+    justify-content: center;
+    background-color:#fff;
+}
+
+.artcategorylist-item-title{
+    font-size: .9rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+}

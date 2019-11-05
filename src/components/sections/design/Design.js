@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import DesignIcon from '../design/designIcon/DesignIcon';
-import history from '../../../history';
 import './design.css'
 
 class Design extends Component {

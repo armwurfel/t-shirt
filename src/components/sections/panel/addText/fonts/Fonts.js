@@ -13,7 +13,7 @@ class fonts extends Component {
         return (
             <div className="card">
                 <CardHeader back="/textTools" title="All" />
-                <Search />
+                <Search placeholder="Search Font" />
                 <div className="fontcategoryoverlay-listcontainer">
                     <div className="fontcategory-list">
                         {Fonts.data.map( font => 

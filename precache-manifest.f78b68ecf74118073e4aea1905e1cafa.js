@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ddcd4c09cc874c93da8b7e57cbd2015f",
+    "revision": "ff4e8c2e82ffaaf44fcb59fb57995b6a",
     "url": "/t-shirt/index.html"
   },
   {
-    "revision": "0adba89ba4de5282d9ac",
+    "revision": "f00f9dd97bf4ae6ec991",
     "url": "/t-shirt/static/css/2.96479aa2.chunk.css"
   },
   {
-    "revision": "a584164a331801e028d4",
+    "revision": "03356e34f5c8bfc96ebe",
     "url": "/t-shirt/static/css/main.a30fbff8.chunk.css"
   },
   {
-    "revision": "0adba89ba4de5282d9ac",
-    "url": "/t-shirt/static/js/2.0717923f.chunk.js"
+    "revision": "f00f9dd97bf4ae6ec991",
+    "url": "/t-shirt/static/js/2.0a548a59.chunk.js"
   },
   {
-    "revision": "a584164a331801e028d4",
-    "url": "/t-shirt/static/js/main.141947ae.chunk.js"
+    "revision": "03356e34f5c8bfc96ebe",
+    "url": "/t-shirt/static/js/main.082f956e.chunk.js"
   },
   {
     "revision": "450e5c36be590dd35cf9",

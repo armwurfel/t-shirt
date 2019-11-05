@@ -23,7 +23,7 @@ class AddArt extends Component {
                                         })
                                     }}
                                 >
-                                    <div className="artcategorylist-item-root" style={{backgroundImage: `url(assets/images/artcat/${cat.ArtCatName}.svg)`}}></div>
+                                    <div className="artcategorylist-item-root" style={{backgroundImage: `url(./assets/images/artcat/${cat.ArtCatName}.svg)`}}></div>
                                 </div>
                             )}
                             </div>

@@ -21,7 +21,7 @@ class AddArt extends Component {
                                         history.push({
                                             pathname: `/addArt/cat/${cat.Id}`
                                         })
-                                    }}
+                                    }} 
                                 >
                                     <div className="artcategorylist-item-root" style={{backgroundImage: `url(./assets/images/artcat/${cat.ArtCatName}.png)`}}></div>
                                 </div>

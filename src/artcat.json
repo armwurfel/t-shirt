@@ -2,11 +2,31 @@
     "data": [
         {
             "Id": 1,
-            "ArtCatName": "cat1"
+            "ArtCatName": "cat1",
+            "subcat": [
+                {
+                    "Id": 1,
+                    "ArtSubCatName": "Most Popular"
+                },
+                {
+                    "Id": 2,
+                    "ArtSubCatName": "Smileys"
+                }
+            ]
         },
         {
             "Id": 2,
-            "ArtCatName": "cat2"
+            "ArtCatName": "cat2",
+            "subcat": [
+                {
+                    "Id": 1,
+                    "ArtSubCatName": "*New & Popular*"
+                },
+                {
+                    "Id": 2,
+                    "ArtSubCatName": "Anchor"
+                }
+            ]
         }
     ]
 }

@@ -19,11 +19,13 @@
     justify-content: center;
     background-color:#fff;
 }
-
 .artcategorylist-item-title{
     font-size: .9rem;
     font-weight: 300;
     cursor: pointer;
     color: #333;
     text-align: center;
+}
+.artcategorylist-item:hover .artcategorylist-item-title {
+    color: #1f51cf;
 }

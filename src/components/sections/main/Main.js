@@ -67,7 +67,7 @@ class Main extends Component {
                                     component={AddArt} 
                                 />
                                 <Route
-                                    path="/addArt/cat"
+                                    path="/addArt/cat/:id"
                                     component={Cat} 
                                 />
                                 <Route

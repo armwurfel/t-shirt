@@ -20,8 +20,10 @@
 }
 .artpage-list-scrolling-container {
     position: relative;
-    height: 800px;
-    width: 539px;
+    height: auto;
+    max-height: 384px;
+    min-height: 100%;
+    width: 100%;
     overflow: auto;
     will-change: transform;
     direction: ltr;
@@ -31,7 +33,7 @@
 }
 .artcategorylist-row{
     width: 50%;
-    height: 126px;
+    height: 97px;
     padding: 0 0 1% 1%;
 }
 .artcategorylist-item-root{

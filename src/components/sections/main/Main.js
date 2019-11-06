@@ -8,6 +8,7 @@ import TextTools from '../panel/addText/textTools/TextTools';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
 import Cat from '../panel/addArt/cat/Cat';
+import SubCat from '../panel/addArt/subcat/SubCat';
 import AddNames from '../panel/addNames/AddNames';
 import Upload from '../panel/upload/Upload';
 import ProductColors from '../panel/productColors/ProductColors';
@@ -23,7 +24,11 @@ class Main extends Component {
           front: true,
           back: false,
           value: "ARM",
-          font: 1
+          font: 1,
+          catTitle: "",
+          subCatId: null,
+          catId: null,
+          subCatTitle: ""
         };
       }
       handleImageFront = (value) => {
@@ -37,6 +42,12 @@ class Main extends Component {
       };
       handleChangeFont = (font) => {
         this.setState({font: font});
+      };
+      handleCatTitle = (id, title) => {
+        this.setState({catTitle: title, catId: id});
+      };
+      handleSubCatTitle = (id, title) => {
+        this.setState({subCatTitle: title, subCatId: id});
       };
     render() {
         return (
@@ -64,11 +75,15 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/addArt"
-                                    component={AddArt} 
+                                    component={() => (<AddArt handleCatTitle={this.handleCatTitle.bind(this)} />)}
                                 />
                                 <Route
                                     path="/addArt/cat/:id"
-                                    component={Cat} 
+                                    component={() => (<Cat catTitle={this.state.catTitle} catId={this.state.catId} handleSubCatTitle={this.handleSubCatTitle.bind(this)} />)}
+                                />
+                                <Route
+                                    path="/addArt/cat/:id/subcat/:id"
+                                    component={() => (<SubCat subCatTitle={this.state.subCatTitle} subCatId={this.state.subCatId} />)}
                                 />
                                 <Route
                                     path="/namesAndNumbers"

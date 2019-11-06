@@ -15,17 +15,18 @@ class AddArt extends Component {
                     <div className="artpage-list-flex-container">
                         <div className="artpage-list-container">
                             <div className="artpage-list-scrolling-container">
-                            {ArtCat.data.map( cat => 
-                                <div className="artcategorylist-row"
-                                    onClick={()=>{
-                                        history.push({
-                                            pathname: `/addArt/cat/${cat.Id}`
-                                        })
-                                    }} 
-                                >
-                                    <div className="artcategorylist-item-root" style={{backgroundImage: `url(./assets/images/artcat/${cat.ArtCatName}.png)`}}></div>
-                                </div>
-                            )}
+                                    {ArtCat.data.map( cat => 
+                                        <span className="artcategorylist-row"
+                                            onClick={()=>{
+                                                history.push({
+                                                    pathname: `/addArt/cat/${cat.Id}`
+                                                })
+                                                this.props.handleCatTitle(cat.Id, cat.ArtCatName)
+                                            }} 
+                                        >
+                                            <div className="artcategorylist-item-root" style={{backgroundImage: `url(./assets/images/artcat/${cat.ArtCatLink}.svg)`}}></div>
+                                        </span>
+                                    )}
                             </div>
                         </div>
                     </div>

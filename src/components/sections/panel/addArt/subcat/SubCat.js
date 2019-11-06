@@ -6,9 +6,9 @@ import './subcat.css';
 
 class SubCat extends Component {
     findSubCatById = () => {
-        for (var i = 0; i < Object.keys(ArtCat.data).length; i++) {
-          if (ArtCat.data[i].Id === parseInt(this.props.subCatId)) {
-            return ArtCat.data[i].subcat;
+        for (var i = 0; i < Object.keys(ArtCat.data[this.props.catId - 1].subcat).length; i++) {
+          if (ArtCat.data[this.props.catId - 1].subcat[i].Id === parseInt(this.props.subCatId)) {
+            return ArtCat.data[this.props.catId -1].subcat[i].ArtIcons;
           }
        }
     };
@@ -17,22 +17,24 @@ class SubCat extends Component {
         const subcat = this.findSubCatById();
         return (
             <div className="card">
-            <CardHeader back={`/addArt/cat/${this.props.subCatId}`} title={this.props.subCatTitle} />
+            <CardHeader back={`/addArt/cat/${this.props.catId}`} title={this.props.subCatTitle} />
             <Search placeholder="Search For Artwork" />
             <div className="artpage">
                 <div className="artpage-list-flex-container">
                     <div className="artpage-list-container">
-                        <ul className="artcategorylist-listcontainer">
-                        {/* {subcat.map( cat => 
-                            <li className="artcategorylist-item"
-                                onClick={()=>{
-                                    
-                                }} 
-                            >
-                                <div class="artcategorylist-item-title">{cat.ArtSubCatName}</div>                            
-                            </li>
-                        )} */}
-                        </ul>
+                        <div className="artpage-list-scrolling-container flex-center">
+                        {subcat.map( cat => 
+                            <span className="clipartlistrow">
+                                <li className="artcategorylist-clipartitem"
+                                    onClick={()=>{
+                                        
+                                    }} 
+                                >
+                                    <img src={`/assets/images/artcat/icons/${cat.ArtIconLink}.png`} alt={cat.ArtIconName} />                            
+                                </li>
+                            </span>
+                        )}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,10 +19,10 @@ class Design extends Component {
                             <div>
                                 <span>
                                     {this.props.front === true ? 
-                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt=" " />
+                                        <img className="product-photo" src="/assets/images/front_large_extended.png" alt=" " />
                                     : ""}
                                     {this.props.back === true ? 
-                                    <img className="product-photo" src="./assets/images/back_large_extended.png" alt="product" />
+                                    <img className="product-photo" src="/assets/images/back_large_extended.png" alt="product" />
                                     : ""}
                                 </span>
                             </div>
@@ -38,7 +38,9 @@ class Design extends Component {
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <DesignIcon font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon type="1" key="1" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon type="2" key="2" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+
                                 </div>
                             </div>
                         </div>

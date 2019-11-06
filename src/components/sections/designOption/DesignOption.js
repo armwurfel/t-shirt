@@ -24,7 +24,7 @@ class DesignOption extends Component {
                                 <div className="design-option-changeviewbutton menubutton">
                                     <div className="design-option-changeView">
                                         <div>
-                                            <img src="./assets/images/front_medium_extended.png" alt="front-img" />
+                                            <img src="/assets/images/front_medium_extended.png" alt="front-img" />
                                         </div>
                                     </div>
                                     <div className="design-option-menubutton-text">
@@ -41,7 +41,7 @@ class DesignOption extends Component {
                                 <div className="design-option-changeviewbutton menubutton">
                                     <div className="design-option-changeView">
                                         <div>
-                                            <img src="./assets/images/back_medium_extended.png" alt="front-img" />
+                                            <img src="/assets/images/back_medium_extended.png" alt="front-img" />
                                         </div>
                                     </div>
                                     <div className="design-option-menubutton-text">

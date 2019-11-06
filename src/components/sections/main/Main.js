@@ -7,6 +7,7 @@ import AddText from '../panel/addText/AddText';
 import TextTools from '../panel/addText/textTools/TextTools';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
+import ArtTools from '../panel/addArt/artTools/ArtTools';
 import Cat from '../panel/addArt/cat/Cat';
 import SubCat from '../panel/addArt/subcat/SubCat';
 import AddNames from '../panel/addNames/AddNames';
@@ -25,9 +26,9 @@ class Main extends Component {
           back: false,
           value: "ARM",
           font: 1,
+          catId: 1,
           catTitle: "",
-          subCatId: null,
-          catId: null,
+          subCatId: 3,
           subCatTitle: ""
         };
       }
@@ -78,12 +79,16 @@ class Main extends Component {
                                     component={() => (<AddArt handleCatTitle={this.handleCatTitle.bind(this)} />)}
                                 />
                                 <Route
+                                    path="/artTools"
+                                    component={() => (<ArtTools />)}
+                                />
+                                <Route
                                     path="/addArt/cat/:id"
                                     component={() => (<Cat catTitle={this.state.catTitle} catId={this.state.catId} handleSubCatTitle={this.handleSubCatTitle.bind(this)} />)}
                                 />
                                 <Route
                                     path="/addArt/cat/:id/subcat/:id"
-                                    component={() => (<SubCat subCatTitle={this.state.subCatTitle} subCatId={this.state.subCatId} />)}
+                                    component={() => (<SubCat subCatTitle={this.state.subCatTitle} subCatId={this.state.subCatId} catId={this.state.catId} />)}
                                 />
                                 <Route
                                     path="/namesAndNumbers"

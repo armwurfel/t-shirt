@@ -1,0 +1,34 @@
+.artpage-list-scrolling-container{
+    overflow: hidden auto;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.clipartlistrow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 152px;
+    width: 129.333px;
+}
+
+.artcategorylist-clipartitem {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: #fff;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    width: 8rem;
+    height: 8rem;
+}
+
+.artcategorylist-clipartitem:hover {
+    cursor: pointer;
+    border-color: #1f51cf;
+    position: relative;
+}

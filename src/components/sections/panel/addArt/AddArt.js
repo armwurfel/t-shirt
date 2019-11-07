@@ -24,7 +24,7 @@ class AddArt extends Component {
                                                 this.props.handleCatTitle(cat.Id, cat.ArtCatName)
                                             }} 
                                         >
-                                            <div className="artcategorylist-item-root" style={{backgroundImage: `url(/assets/images/artcat/${cat.ArtCatLink}.svg)`}}></div>
+                                            <div className="artcategorylist-item-root" style={{backgroundImage: `url(./assets/images/artcat/${cat.ArtCatLink}.svg)`}}></div>
                                         </span>
                                     )}
                             </div>

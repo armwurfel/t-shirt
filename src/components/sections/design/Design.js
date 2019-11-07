@@ -19,10 +19,10 @@ class Design extends Component {
                             <div>
                                 <span>
                                     {this.props.front === true ? 
-                                        <img className="product-photo" src="/assets/images/front_large_extended.png" alt=" " />
+                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt=" " />
                                     : ""}
                                     {this.props.back === true ? 
-                                    <img className="product-photo" src="/assets/images/back_large_extended.png" alt="product" />
+                                    <img className="product-photo" src="./assets/images/back_large_extended.png" alt="product" />
                                     : ""}
                                 </span>
                             </div>

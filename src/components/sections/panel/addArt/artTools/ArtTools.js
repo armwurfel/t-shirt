@@ -109,7 +109,13 @@ class TextOptions extends Component {
                             <div className={this.state.singleColor === true ? "toggle isactive" : "toggle"}></div>
                         </div>
                     </div>
-                    <div class="iconcardtool iconcardtool-font-color iconcardtool-clickable">
+                    <div class="iconcardtool iconcardtool-font-color iconcardtool-clickable"
+                        onClick={() => {
+                            history.push({
+                                pathname: `${this.state.singleColor === true ? '/artTools/colors' : ''}`
+                            })
+                        }}
+                    >
                         <div class="iconcardtool-title">{this.state.singleColor === true ? "Edit Color" : "Art Colors"}</div><div class="iconcardtool-content">
                             {this.state.singleColor === true ? 
                             <><div>Black</div>

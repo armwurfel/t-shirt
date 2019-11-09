@@ -1,0 +1,93 @@
+.colorpicker{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+.colorpicker-title{
+    font-weight: 300;
+}
+.colorpicker-selected {
+    flex: 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    height: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: .833rem;
+}
+.colorpicker-title + .colorpicker-selected {
+    margin-top: 1rem;
+}
+.colorpicker-selectedcolor {
+    display: flex;
+    align-items: center;
+}
+.colorpicker-selected .colorswatch {
+    flex: 0 0 auto;
+    margin-right: .4rem;
+    transform: translateY(-1px);
+}
+.colorswatch.issmall {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+.colorswatch.isdisabled {
+    cursor: auto;
+}
+.colorpicker-selectedcolorname {
+    font-size: .833rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.colorswatches {
+    align-items: center;
+}
+.colorswatches-list {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    margin: -.375rem;
+    padding: .375rem 0;
+    flex-wrap: wrap;
+    width: auto;
+}
+.colorswatches-item {
+    margin: .375rem;
+}
+.colorswatch {
+    position: relative;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    user-select: none;
+}
+.colorswatches-item > .colorswatch {
+    flex: 0 0 auto;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.iconcolorpickercard-content{
+    padding: 1.5rem;
+}
+.colorswatch-inset {
+    display: none;
+}
+.colorswatch.issmall .colorswatch-outline {
+    stroke: gray;
+}
+.colorpicker-legend {
+    flex: 0 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: .833rem;
+    box-sizing: content-box;
+}
+.colorpicker-legend .colorswatch {
+    margin-right: .4rem;
+    transform: translateY(-1px);
+}

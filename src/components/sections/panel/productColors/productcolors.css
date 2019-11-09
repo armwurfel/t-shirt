@@ -1,0 +1,35 @@
+.productcolorpicker {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+}
+.productcolorpicker .tabs {
+    flex: 0 0 auto;
+    border-bottom: 1px solid #b7b7b7;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tab {
+    color: #333;
+    flex-grow: 1;
+    padding: .75rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    width: 50%;
+    cursor: pointer;
+}
+.tabs li {
+    font-size: .833rem;
+    font-weight: 500;
+}
+.tab.isselected {
+    color: #fa3c00;
+    border-bottom: 2px solid#fa3c00;
+}
+.productcolorpicker .tabs li {
+    text-transform: capitalize;
+}
+

@@ -5,12 +5,15 @@ import Toolbar from '../toolbar/Toolbar';
 import Default from '../panel/default/Default';
 import AddText from '../panel/addText/AddText';
 import TextTools from '../panel/addText/textTools/TextTools';
+import TextColor from '../panel/addText/textColor/TextColor';
+import ArtColor from '../panel/addArt/artColor/ArtColor';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
 import ArtTools from '../panel/addArt/artTools/ArtTools';
 import Cat from '../panel/addArt/cat/Cat';
 import SubCat from '../panel/addArt/subcat/SubCat';
 import AddNames from '../panel/addNames/AddNames';
+import NamesTools from '../panel/addNames/namesTools/NamesTools';
 import Upload from '../panel/upload/Upload';
 import ProductColors from '../panel/productColors/ProductColors';
 import AddNotes from '../panel/addNotes/AddNotes';
@@ -71,6 +74,10 @@ class Main extends Component {
                                     component={() => (<TextTools value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
                                 />
                                 <Route
+                                    path="textTools/colors"
+                                    component={TextColor} 
+                                />
+                                <Route
                                     path="/addText/selectFont"
                                     component={() => (<Fonts handleChangeFont={this.handleChangeFont.bind(this)} />)}
                                 />
@@ -83,6 +90,10 @@ class Main extends Component {
                                     component={() => (<ArtTools />)}
                                 />
                                 <Route
+                                    path="/artTools/colors"
+                                    component={ArtColor} 
+                                />
+                                <Route
                                     path="/addArt/cat/:id"
                                     component={() => (<Cat catTitle={this.state.catTitle} catId={this.state.catId} handleSubCatTitle={this.handleSubCatTitle.bind(this)} />)}
                                 />
@@ -93,6 +104,10 @@ class Main extends Component {
                                 <Route
                                     path="/namesAndNumbers"
                                     component={AddNames} 
+                                />
+                                <Route
+                                    path="/namesAndNumbers/tools"
+                                    component={NamesTools} 
                                 />
                                 <Route
                                     path="/uploadForm"

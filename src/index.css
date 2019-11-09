@@ -36,6 +36,10 @@ html button, html input, html optgroup, html select, html textarea, body button,
 }
 html {
   line-height: 1.15;
+  color: #4a4a4a;
+}
+body{
+  color: #4a4a4a;
 }
 svg:not(:root) {
   overflow: hidden;

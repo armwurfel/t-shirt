@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CardHeader from '../../../../utilitiesComponent/cardHeader/CardHeader';
 import Slider from 'rc-slider';
 import Fonts from '../../../../../../src/fonts.json';
+import history from '../../../../../history';
 
 import './texttools.css';
 
@@ -125,7 +126,13 @@ class TextOptions extends Component {
                         </div>
                     </div>
                     </Link>
-                    <div class="iconcardtool iconcardtool-font-color iconcardtool-clickable">
+                    <div class="iconcardtool iconcardtool-font-color iconcardtool-clickable"
+                        onClick={()=>{
+                            history.push({
+                                pathname: `/textTools/colors`
+                            })
+                        }}
+                    >
                         <div class="iconcardtool-title">Text Color</div><div class="iconcardtool-content">
                             <div>Black</div>
                             <div class="colorswatch isdisabled isinert" data-label="Black">

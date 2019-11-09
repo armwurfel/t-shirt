@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "Id": 1,
+            "ColorName": "Red",
+            "R": "200",
+            "G": "15",
+            "B": "15",
+            "cssString": "rgb(200, 15, 40)",
+            "hashString": "c80f28"
+        },
+        {
+            "Id": 2,
+            "ColorName": "Green",
+            "R": "60",
+            "G": "165",
+            "B": "30",
+            "cssString": "rgb(60, 165, 30)",
+            "hashString": "3ca51e"
+        },
+        {
+            "Id": 3,
+            "ColorName": "Red",
+            "R": "0",
+            "G": "95",
+            "B": "160",
+            "cssString": "rgb(0, 95, 160)",
+            "hashString": "005fa0"
+        },
+        {
+            "Id": 4,
+            "ColorName": "White",
+            "R": "254",
+            "G": "254",
+            "B": "254",
+            "cssString": "rgb(254, 254, 254)",
+            "hashString": "fefefe"
+        },
+        {
+            "Id": 5,
+            "ColorName": "Black",
+            "R": "0",
+            "G": "0",
+            "B": "0",
+            "cssString": "rgb(0, 0, 0)",
+            "hashString": "000000"
+        }
+    ]
+}

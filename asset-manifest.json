@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/t-shirt/static/css/main.0d11c92f.chunk.css",
-    "main.js": "/t-shirt/static/js/main.39dc3949.chunk.js",
-    "main.js.map": "/t-shirt/static/js/main.39dc3949.chunk.js.map",
+    "main.css": "/t-shirt/static/css/main.c531343c.chunk.css",
+    "main.js": "/t-shirt/static/js/main.fe3a565f.chunk.js",
+    "main.js.map": "/t-shirt/static/js/main.fe3a565f.chunk.js.map",
     "runtime-main.js": "/t-shirt/static/js/runtime-main.da1e05c4.js",
     "runtime-main.js.map": "/t-shirt/static/js/runtime-main.da1e05c4.js.map",
     "static/css/2.96479aa2.chunk.css": "/t-shirt/static/css/2.96479aa2.chunk.css",
-    "static/js/2.176b68a4.chunk.js": "/t-shirt/static/js/2.176b68a4.chunk.js",
-    "static/js/2.176b68a4.chunk.js.map": "/t-shirt/static/js/2.176b68a4.chunk.js.map",
+    "static/js/2.84a7575f.chunk.js": "/t-shirt/static/js/2.84a7575f.chunk.js",
+    "static/js/2.84a7575f.chunk.js.map": "/t-shirt/static/js/2.84a7575f.chunk.js.map",
     "index.html": "/t-shirt/index.html",
-    "precache-manifest.342b51179a2dead8eaa2e4804c41c355.js": "/t-shirt/precache-manifest.342b51179a2dead8eaa2e4804c41c355.js",
+    "precache-manifest.bafb08e1c4f633e086565c506bcd9587.js": "/t-shirt/precache-manifest.bafb08e1c4f633e086565c506bcd9587.js",
     "service-worker.js": "/t-shirt/service-worker.js",
     "static/css/2.96479aa2.chunk.css.map": "/t-shirt/static/css/2.96479aa2.chunk.css.map",
-    "static/css/main.0d11c92f.chunk.css.map": "/t-shirt/static/css/main.0d11c92f.chunk.css.map"
+    "static/css/main.c531343c.chunk.css.map": "/t-shirt/static/css/main.c531343c.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.da1e05c4.js",
     "static/css/2.96479aa2.chunk.css",
-    "static/js/2.176b68a4.chunk.js",
-    "static/css/main.0d11c92f.chunk.css",
-    "static/js/main.39dc3949.chunk.js"
+    "static/js/2.84a7575f.chunk.js",
+    "static/css/main.c531343c.chunk.css",
+    "static/js/main.fe3a565f.chunk.js"
   ]
 }

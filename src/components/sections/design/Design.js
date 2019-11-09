@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DesignIcon from '../design/designIcon/DesignIcon';
+import DesignIconImg from '../design/designIconImg/DesignIconImg';
 import './design.css'
+
 
 class Design extends Component {
     constructor() {
@@ -38,8 +40,9 @@ class Design extends Component {
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <DesignIcon type="1" key="1" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
-                                    <DesignIcon type="2" key="2" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon type="1" keys="1" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIconImg type="1" keys="1" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    {/* <DesignIconImg type="2" keys="2" /> */}
 
                                 </div>
                             </div>

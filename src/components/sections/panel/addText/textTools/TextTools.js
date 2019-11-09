@@ -45,7 +45,7 @@ class TextOptions extends Component {
             <div className="card">
                 <CardHeader title="Edit Text" />
                 <div className="card-content-main">
-                    <div className="textcard-container">
+                    <div className="card-container">
                         <div className="textinput">
                             <label className="textinput-textarea-container">
                                 <textarea className="textinput-textarea"

@@ -9,7 +9,7 @@ class ProductColors extends Component {
         super(props);
         this.state = {
             colorName: "White",
-            colorId: 4
+            colorId: this.props.productColor
         }
     }
     render() {
@@ -22,7 +22,7 @@ class ProductColors extends Component {
                         <li class="tab">Quantity 6+</li>
                     </ul>
                  </div>
-                 <ColorSelection colorName={this.state.colorName} colorId={this.state.colorId} />
+                 <ColorSelection handleProductColor={this.props.handleProductColor} colorName={this.state.colorName} colorId={this.state.colorId} />
             </div>
         )
     }

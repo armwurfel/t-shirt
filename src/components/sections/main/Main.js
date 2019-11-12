@@ -32,7 +32,8 @@ class Main extends Component {
           catId: 1,
           catTitle: "",
           subCatId: 3,
-          subCatTitle: ""
+          subCatTitle: "",
+          productColor: 4
         };
       }
       handleImageFront = (value) => {
@@ -53,6 +54,9 @@ class Main extends Component {
       handleSubCatTitle = (id, title) => {
         this.setState({subCatTitle: title, subCatId: id});
       };
+      handleProductColor = (color) => {
+        this.setState({productColor: color})
+      }
     render() {
         return (
             <section className="main">
@@ -115,7 +119,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/productColors"
-                                    component={ProductColors} 
+                                    component={() => (<ProductColors productColor={this.state.productColor} handleProductColor={this.handleProductColor.bind(this)} />)}
                                 />
                                 <Route
                                     path="/notes"
@@ -124,8 +128,8 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
-                            <DesignOption  handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
+                            <Design productColor={this.state.productColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>
                 </Router>

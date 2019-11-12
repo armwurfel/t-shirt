@@ -5,8 +5,8 @@ import './design.css'
 
 
 class Design extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             
         };
@@ -21,10 +21,10 @@ class Design extends Component {
                             <div>
                                 <span>
                                     {this.props.front === true ? 
-                                        <img className="product-photo" src="./assets/images/front_large_extended.png" alt=" " />
+                                        <img className="product-photo" src={`./assets/images/product-images/${this.props.productColor}/front_large_extended.png`} alt="product" />
                                     : ""}
                                     {this.props.back === true ? 
-                                    <img className="product-photo" src="./assets/images/back_large_extended.png" alt="product" />
+                                    <img className="product-photo" src={`./assets/images/product-images/${this.props.productColor}/back_large_extended.png`} alt="product" />
                                     : ""}
                                 </span>
                             </div>

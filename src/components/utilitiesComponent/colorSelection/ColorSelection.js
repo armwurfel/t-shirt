@@ -74,6 +74,7 @@ class ColorSelection extends Component {
                                                     this.setState({
                                                         colorId: color.Id
                                                     })
+                                                    this.props.handleProductColor(color.Id)
                                                 }
                                             }
                                         >

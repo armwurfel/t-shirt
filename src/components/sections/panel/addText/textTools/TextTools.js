@@ -12,11 +12,11 @@ class TextOptions extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sliderValueRotation: 0,
+            sliderValueRotation: this.props.textRotation,
             currentFont: 1,
             fontPath: "",
             value: this.props.value,
-            textColor: this.props.textColor
+            textColor: this.props.textColor        
         }
     }
 
@@ -27,9 +27,12 @@ class TextOptions extends Component {
         }
     }
 
-    handleValueRotation = (sliderValueRotation) => {
+    handleValueRotation = ( sliderValueRotation ) => {
         this.setState({ sliderValueRotation });
     }
+    handleTextRotation = () => {
+        this.props.handleTextRotation(this.state.sliderValueRotation)
+    } 
     findFontById = (data, idToLookFor) => {
         for (var i = 0; i < Object.keys(data).length; i++) {
           if (data[i].Id === parseInt(idToLookFor)) {
@@ -120,11 +123,9 @@ class TextOptions extends Component {
                                         min={-180} 
                                         max={180} 
                                         defaultValue={sliderValueRotation}
-                                        onChange={
-                                            this.handleValueRotation
-                                            // this.props.handleTextRotation(this.state.sliderValueRotation)
-                                        
-                                        } />
+                                        onChange={this.handleValueRotation} 
+                                        onAfterChange={this.handleTextRotation}
+                                        />
                                     <input className="rotationcontrol-value" type="number" value={sliderValueRotation} />
                                 </div>
                             </div>

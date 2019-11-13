@@ -59,7 +59,7 @@ class DesignIconImg extends Component {
                     }}
                 >
                     {/* <img class="foundryimage" alt="font" draggable="false" src={`//www.customink.com/text/v1/gen?op[fnt]=${this.findFontById( Fonts.data , this.props.font && this.props.font )}&amp;op[ht]=200&amp;op[sf]=13.5&amp;op[txt]=${this.props.TextFrontValue}&amp;op[r]=0&amp;op[g]=0&amp;op[b]=0&amp;op[a]=center&amp;op[ro]=0&amp;op[lr]=false&amp;op[s_r]=0&amp;op[s_g]=0&amp;op[s_b]=0&amp;op[cf]=false&amp;op[ef]=normal&amp;op[efs]=0`} /> */}
-                    <img onClick={(event) => {event.preventDefault()}} class="clipartimage" alt="icon" draggable={false} src={`//clipart-transformer.out.customink.com/clipart/manipulate?height=66&amp;width=66&amp;red=0&amp;green=0&amp;blue=0&amp;clipart_id=222863&amp;path=%2Fclipart%2Feps%2F&amp;fV=false&amp;fH=false&amp;lockRatio=true&amp;grayscale=false&amp;blackwhite=false&amp;rotate=0&amp;tag_id=75041&amp;transparent=true`} />
+                    <img onClick={(event) => {event.preventDefault()}} class="clipartimage" alt="icon" draggable={false} src={`//clipart-transformer.out.customink.com/clipart/manipulate?height=66&amp;width=66&amp;red=0&amp;green=0&amp;blue=0&amp;clipart_id=222863&amp;path=%2Fclipart%2Feps%2F&amp;fV=false&amp;fH=false&amp;lockRatio=true&amp;grayscale=false&amp;blackwhite=false&amp;rotate=${this.props.iconRotation}&amp;tag_id=75041&amp;transparent=true`} />
                 </Rnd>
                  
             </div>

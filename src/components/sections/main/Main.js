@@ -36,7 +36,8 @@ class Main extends Component {
           productColor: 4,
           textColor: 5,
           artColor: 4,
-          textRotation: 0
+          textRotation: 0,
+          iconRotation: 0
         };
       }
       handleImageFront = (value) => {
@@ -68,6 +69,9 @@ class Main extends Component {
       }
       handleTextRotation = (value) => {
         this.setState({textRotation: value})
+      }
+      handleIconRotation = (value) => {
+        this.setState({iconRotation: value})
       }
     render() {
         return (
@@ -103,7 +107,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/artTools"
-                                    component={() => (<ArtTools />)}
+                                    component={() => (<ArtTools iconRotation={this.state.iconRotation} handleIconRotation={this.handleIconRotation.bind(this)} />)}
                                 />
                                 <Route
                                     path="/artTools/colors"
@@ -140,7 +144,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

@@ -7,7 +7,7 @@ class ArtColor extends Component {
         super(props);
         this.state = {
             colorName: "Black",
-            colorId: 5
+            colorId: this.props.artColor
         }
     }
     render() {

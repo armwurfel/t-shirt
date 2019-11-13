@@ -41,7 +41,7 @@ class Design extends Component {
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
                                     <DesignIcon type="1" keys="1" textRotation={this.props.textRotation} textColor={this.props.textColor} font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
-                                    <DesignIconImg type="1" keys="1" font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIconImg type="1" keys="1" font={this.props.font} iconRotation={this.props.iconRotation} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                     {/* <DesignIconImg type="2" keys="2" /> */}
 
                                 </div>

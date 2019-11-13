@@ -163,7 +163,13 @@ class TextOptions extends Component {
                         </div>
                     </div>
                     <div class="textoutlinetoggle">
-                        <div class="iconcardtool iconcardtool-outline iconcardtool-clickable">
+                        <div class="iconcardtool iconcardtool-outline iconcardtool-clickable"
+                            onClick={()=>{
+                                history.push({
+                                    pathname: `/textTools/outline`
+                                })
+                            }}
+                        >
                             <div class="iconcardtool-title">Outline</div>
                             <div class="iconcardtool-content">
                                 <span class="iconcardtool-defaultfont">Add Outline</span>

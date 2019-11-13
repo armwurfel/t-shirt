@@ -6,6 +6,7 @@ import Default from '../panel/default/Default';
 import AddText from '../panel/addText/AddText';
 import TextTools from '../panel/addText/textTools/TextTools';
 import TextColor from '../panel/addText/textColor/TextColor';
+import TextOutline from '../panel/addText/textOutline/TextOutline';
 import ArtColor from '../panel/addArt/artColor/ArtColor';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
@@ -92,6 +93,10 @@ class Main extends Component {
                                 <Route
                                     path="/textTools"
                                     component={() => (<TextTools textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                />
+                                <Route
+                                    path="/textTools/outline"
+                                    component={TextOutline} 
                                 />
                                 <Route
                                     path="/textTools/colors"

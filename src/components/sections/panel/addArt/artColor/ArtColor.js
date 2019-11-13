@@ -14,7 +14,7 @@ class ArtColor extends Component {
         return (
             <div className="card">
                 <CardHeader back="/artTools" title="Art Colors" />
-                <ColorSelection colorName={this.state.colorName} colorId={this.state.colorId} />
+                <ColorSelection handleArtColor={this.props.handleArtColor} colorName={this.state.colorName} colorId={this.state.colorId} />
             </div>
         )
     }

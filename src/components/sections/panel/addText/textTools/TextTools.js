@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CardHeader from '../../../../utilitiesComponent/cardHeader/CardHeader';
 import Slider from 'rc-slider';
 import Fonts from '../../../../../../src/fonts.json';
+import Colors from '../../../../../colors.json';
 import history from '../../../../../history';
 
 import './texttools.css';
@@ -14,13 +15,15 @@ class TextOptions extends Component {
             sliderValueRotation: 0,
             currentFont: 1,
             fontPath: "",
-            value: this.props.value
+            value: this.props.value,
+            textColor: this.props.textColor
         }
     }
 
     static getDerivedStateFromProps(props, state) {
         return {
-            currentFont: props.font
+            currentFont: props.font,
+            // sliderValueRotation: props.textRotation
         }
     }
 
@@ -34,14 +37,23 @@ class TextOptions extends Component {
           }
        }
     };
+    findColorById = () => {
+        for (var i = 0; i < Object.keys(Colors.data).length; i++) {
+          if (Colors.data[i].Id === parseInt(this.state.textColor)) {
+            return Colors.data[i];
+          }
+       }
+    };
     handleChangeText = (e) => {
         this.setState({
             value: e.target.value
         });
         this.props.handleTextFrontValue(e.target.value)
     }
+    
     render() {
         const { sliderValueRotation } = this.state;
+        const findColorById = this.findColorById();
         return (
             <div className="card">
                 <CardHeader title="Edit Text" />
@@ -108,7 +120,11 @@ class TextOptions extends Component {
                                         min={-180} 
                                         max={180} 
                                         defaultValue={sliderValueRotation}
-                                        onChange={this.handleValueRotation} />
+                                        onChange={
+                                            this.handleValueRotation
+                                            // this.props.handleTextRotation(this.state.sliderValueRotation)
+                                        
+                                        } />
                                     <input className="rotationcontrol-value" type="number" value={sliderValueRotation} />
                                 </div>
                             </div>
@@ -134,9 +150,9 @@ class TextOptions extends Component {
                         }}
                     >
                         <div class="iconcardtool-title">Text Color</div><div class="iconcardtool-content">
-                            <div>Black</div>
-                            <div class="colorswatch isdisabled isinert" data-label="Black">
-                                <svg viewBox="0 0 10.5 10.5"><defs><mask id="ColorSwatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="ColorSwatch-dogear-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 4   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="ColorSwatch-dogear-corner-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 4 3   A 1 1 0 0 1 3 4   L 0 4 " fill="#ffffff" stroke-width="0.5"></path></mask><filter id="ColorSwatch-dogear-filter-bedba410-c096-4299-8d14-164d2d2ec70e"><feBlend in="SourceGraphic" in2="BackgroundImage" mode="screen"></feBlend></filter></defs><g fill="rgb(0, 0, 0)" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"><g mask="url(#ColorSwatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e)" transform="translate(0.25, 0.25)"><path class="ColorSwatch-primary" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="rgb(0, 0, 0)"></path><path class="ColorSwatch-secondary" d="   M 6.5 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 6.5 10   Z " fill="rgb(0, 0, 0)"></path><path class="ColorSwatch-inset" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#ffffff" stroke-linejoin="miter" stroke-width="2.5"></path><path class="ColorSwatch-outline" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#cccccc" stroke-width="0.5"></path></g></g>
+                            <div>{findColorById.ColorName}</div>
+                            <div class="colorswatch isdisabled isinert" data-label={findColorById.ColorName}>
+                                <svg viewBox="0 0 10.5 10.5"><defs><mask id="colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 4   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-corner-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 4 3   A 1 1 0 0 1 3 4   L 0 4 " fill="#ffffff" stroke-width="0.5"></path></mask><filter id="colorswatch-dogear-filter-bedba410-c096-4299-8d14-164d2d2ec70e"><feBlend in="SourceGraphic" in2="BackgroundImage" mode="screen"></feBlend></filter></defs><g fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`} stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"><g mask="url(#colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e)" transform="translate(0.25, 0.25)"><path class="colorswatch-primary" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`}></path><path class="colorswatch-secondary" d="   M 6.5 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 6.5 10   Z " fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`}></path><path class="colorswatch-inset" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#ffffff" stroke-linejoin="miter" stroke-width="2.5"></path><path class="colorswatch-outline" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#cccccc" stroke-width="0.5"></path></g></g>
                                 </svg>
                             </div>
                         </div>

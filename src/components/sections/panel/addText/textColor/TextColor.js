@@ -14,7 +14,7 @@ class TextColor extends Component {
         return (
             <div className="card">
                 <CardHeader back="/textTools" title="Font Colors" />
-                <ColorSelection colorName={this.state.colorName} colorId={this.state.colorId}/>
+                <ColorSelection handleTextColor={this.props.handleTextColor} colorName={this.state.colorName} colorId={this.state.colorId}/>
             </div>
         )
     }

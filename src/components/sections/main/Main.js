@@ -33,7 +33,10 @@ class Main extends Component {
           catTitle: "",
           subCatId: 3,
           subCatTitle: "",
-          productColor: 4
+          productColor: 4,
+          textColor: 5,
+          artColor: 4,
+          textRotation: 0
         };
       }
       handleImageFront = (value) => {
@@ -57,6 +60,15 @@ class Main extends Component {
       handleProductColor = (color) => {
         this.setState({productColor: color})
       }
+      handleTextColor = (color) => {
+        this.setState({textColor: color})
+      }
+      handleArtColor = (color) => {
+        this.setState({artColor: color})
+      }
+      handleTextRotation = (value) => {
+        this.setState({textRotation: value})
+      }
     render() {
         return (
             <section className="main">
@@ -75,11 +87,11 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools"
-                                    component={() => (<TextTools value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                    component={() => (<TextTools textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
                                 />
                                 <Route
-                                    path="textTools/colors"
-                                    component={TextColor} 
+                                    path="/textTools/colors"
+                                    component={() => (<TextColor textColor={this.state.textColor} handleTextColor={this.handleTextColor.bind(this)} />)}
                                 />
                                 <Route
                                     path="/addText/selectFont"
@@ -95,7 +107,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/artTools/colors"
-                                    component={ArtColor} 
+                                    component={() => (<ArtColor artColor={this.state.artColor} handleArtColor={this.handleArtColor.bind(this)} />)}
                                 />
                                 <Route
                                     path="/addArt/cat/:id"
@@ -128,7 +140,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design productColor={this.state.productColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

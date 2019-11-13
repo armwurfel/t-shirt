@@ -26,7 +26,7 @@ class ColorSelection extends Component {
                         <div class="colorpicker-title">Select color</div>
                         <div class="colorpicker-selected">
                                 <div class="colorpicker-selectedcolor">
-                                    <div class="colorswatch isdisabled issmall isinert" data-label={findColorById.colorName}>
+                                    <div class="colorswatch isdisabled issmall isinert" data-label={findColorById.ColorName}>
                                         <svg viewBox="0 0 10.5 10.5">
                                             <defs>
                                                 <mask id="colorswatch-normal-ebd22ca0-c7dd-41a8-81dc-3896846c3164">
@@ -74,7 +74,9 @@ class ColorSelection extends Component {
                                                     this.setState({
                                                         colorId: color.Id
                                                     })
-                                                    this.props.handleProductColor(color.Id)
+                                                    this.props.handleProductColor && this.props.handleProductColor(color.Id)
+                                                    this.props.handleTextColor && this.props.handleTextColor(color.Id)
+                                                    this.props.handleArtColor && this.props.handleArtColor(color.Id)
                                                 }
                                             }
                                         >

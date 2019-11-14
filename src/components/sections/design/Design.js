@@ -40,7 +40,7 @@ class Design extends Component {
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <DesignIcon type="1" keys="1" outlineSize={this.props.outlineSize} outlineColor={this.props.outlineColor} textRotation={this.props.textRotation} textColor={this.props.textColor} font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon type="1" keys="1" shapeValue={this.props.shapeValue} shape={this.props.shape} outlineSize={this.props.outlineSize} outlineColor={this.props.outlineColor} textRotation={this.props.textRotation} textColor={this.props.textColor} font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                     <DesignIconImg type="1" keys="1" font={this.props.font} iconRotation={this.props.iconRotation} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                     {/* <DesignIconImg type="2" keys="2" /> */}
 

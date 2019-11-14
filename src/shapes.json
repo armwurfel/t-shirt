@@ -1,0 +1,135 @@
+{
+    "data": [
+        {
+            "Id": 0,
+            "Name": "normal",
+            "Effect": "normal",
+            "DefaulValue": 0,
+            "MinRange": 0,
+            "MaxRange": 1,
+            "MinValue": 0,
+            "MaxValue": 0,
+            "LeftText": "",
+            "RightText": "",
+            "ActiveValue": 0
+        },
+        {
+            "Id": 1,
+            "Name": "curve",
+            "Effect": "arc",
+            "DefaulValue": 2.0,
+            "MinRange": 0,
+            "MaxRange": 11,
+            "MinValue": 0.5,
+            "MaxValue": -0.5,
+            "LeftText": "Down",
+            "RightText": "Up",
+            "ActiveValue": [
+                {
+                    "Id": 0,
+                    "Value": 0.5
+                },
+                {
+                    "Id": 1,
+                    "Value": 1.0
+                },
+                {
+                    "Id": 2,
+                    "Value": 2.0
+                },
+                {
+                    "Id": 3,
+                    "Value": 4.0
+                },
+                {
+                    "Id": 4,
+                    "Value": 8.0
+                },
+                {
+                    "Id": 5,
+                    "Value": 32.0
+                },
+                {
+                    "Id": 6,
+                    "Value": -32.0
+                },
+                {
+                    "Id": 7,
+                    "Value": -8.0
+                },
+                {
+                    "Id": 8,
+                    "Value": -4.0
+                },
+                {
+                    "Id": 9,
+                    "Value": -2.0
+                },
+                {
+                    "Id": 10,
+                    "Value": -1.0
+                },
+                {
+                    "Id": 11,
+                    "Value": -0.5
+                }
+            ]
+        },
+        {
+            "Id": 2,
+            "Name": "arch",
+            "Effect": "arch",
+            "DefaulValue": 5,
+            "MinRange": 0,
+            "MaxRange": 9,
+            "MinValue": 3.0,
+            "MaxValue": -3.0,
+            "LeftText": "Down",
+            "RightText": "Up",
+            "ActiveValue": [
+                {
+                    "Id": 0,
+                    "Value": 3.0
+                },
+                {
+                    "Id": 1,
+                    "Value": 4.0
+                },
+                {
+                    "Id": 2,
+                    "Value": 5.0
+                },
+                {
+                    "Id": 3,
+                    "Value": 8.0
+                },
+                {
+                    "Id": 4,
+                    "Value": 10.0
+                },
+                {
+                    "Id": 5,
+                    "Value": -10.0
+                },
+                {
+                    "Id": 6,
+                    "Value": -8.0
+                },
+                {
+                    "Id": 7,
+                    "Value": -5.0
+                },
+                {
+                    "Id": 8,
+                    "Value": -4.0
+                },
+                {
+                    "Id": 9,
+                    "Value": -3.0
+                }
+            ]
+
+        }
+       
+    ]
+}

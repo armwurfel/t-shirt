@@ -5,6 +5,7 @@ import Slider from 'rc-slider';
 import Fonts from '../../../../../fonts.json';
 import Colors from '../../../../../colors.json';
 import Outline from '../../../../../outline.json';
+import shapes from '../../../../../shapes.json';
 import history from '../../../../../history';
 
 import './texttools.css';
@@ -19,7 +20,8 @@ class TextOptions extends Component {
             value: this.props.value,
             textColor: this.props.textColor,
             outlineSize: this.props.outlineSize,
-            outlineColor: this.props.outlineColor
+            outlineColor: this.props.outlineColor,
+            shape: this.props.shape
         }
     }
 
@@ -56,6 +58,13 @@ class TextOptions extends Component {
           }
        }
     };
+    findShapeById = () => {
+        for (var i = 0; i < Object.keys(shapes.data).length; i++) {
+          if (shapes.data[i].Id === parseInt(this.state.shape)) {
+            return shapes.data[i].Name;
+          }
+       }
+    };
     handleChangeText = (e) => {
         this.setState({
             value: e.target.value
@@ -68,6 +77,7 @@ class TextOptions extends Component {
         const findColorById = this.findColorById(Colors.data, this.state.textColor);
         const findColorOutlineById = this.findColorById(Colors.data, this.state.outlineColor);
         const findOutlineById = this.findOutlineById(Outline.data, this.state.outlineSize);
+        const findShapeById = this.findShapeById();
         return (
             <div className="card">
                 <CardHeader title="Edit Text" />
@@ -206,10 +216,24 @@ class TextOptions extends Component {
                         </div>
                         <div></div>
                     </div>
-                    <div class="iconcardtool iconcardtool-effects iconcardtool-clickable">
+                    <div class="iconcardtool iconcardtool-effects iconcardtool-clickable"
+                        onClick={()=>{
+                            history.push({
+                                pathname: `/textTools/textEffects`
+                            })
+                        }}
+                    >
                         <div class="iconcardtool-title">Text Shape</div>
                         <div class="iconcardtool-content">
-                            <span class="iconcardtool-defaultfont">Add Text Shape</span>
+                        {   
+                            this.state.shape === 0 ?
+                                <span class="iconcardtool-defaultfont">Add Text Shape</span>
+                            :
+                            <div className="texttools-effect-icon">
+                                <img src=
+                                {`../assets/images/textshapes/${findShapeById}.svg`} alt=" "/>
+                            </div>
+                        }
                         </div>
                         <div class="iconcardtool-chevron">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 11.4 20.1"><path d="M10 20.1c-.4 0-.7-.1-1-.4L.4 11c-.3-.2-.4-.6-.4-1s.1-.7.4-1L9 .4c.5-.5 1.4-.5 2 0s.5 1.4 0 2L3.4 10l7.7 7.7c.5.5.5 1.4 0 2-.3.3-.7.4-1.1.4z"></path>

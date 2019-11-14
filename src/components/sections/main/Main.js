@@ -7,6 +7,7 @@ import AddText from '../panel/addText/AddText';
 import TextTools from '../panel/addText/textTools/TextTools';
 import TextColor from '../panel/addText/textColor/TextColor';
 import TextOutline from '../panel/addText/textOutline/TextOutline';
+import TextShape from '../panel/addText/textShape/TextShape';
 import ArtColor from '../panel/addArt/artColor/ArtColor';
 import Fonts from '../panel/addText/fonts/Fonts';
 import AddArt from '../panel/addArt/AddArt';
@@ -40,7 +41,9 @@ class Main extends Component {
           textRotation: 0,
           iconRotation: 0,
           outlineColor: 1,
-          outlineSize: 0
+          outlineSize: 0,
+          shape: 0,
+          shapeValue: 0
         };
       }
       handleImageFront = (value) => {
@@ -82,6 +85,12 @@ class Main extends Component {
       handleOutlineSize = (value) => {
         this.setState({outlineSize: value})
       }
+      handleShape = (value) => {
+        this.setState({shape: value})
+      }
+      handleShapeValue = (value) => {
+        this.setState({shapeValue: value})
+      }
     render() {
         return (
             <section className="main">
@@ -100,7 +109,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools"
-                                    component={() => (<TextTools outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                    component={() => (<TextTools shape={this.state.shape} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
                                 />
                                 <Route
                                     path="/textTools/outline"
@@ -125,6 +134,11 @@ class Main extends Component {
                                 <Route
                                     path="/artTools/colors"
                                     component={() => (<ArtColor artColor={this.state.artColor} handleArtColor={this.handleArtColor.bind(this)} />)}
+                                />
+                                <Route
+                                    path="/textTools/textEffects"
+                                    component={() => (<TextShape shape={this.state.shape} shapeValue={this.state.shapeValue} handleShape={this.handleShape.bind(this)} handleShapeValue={this.handleShapeValue.bind(this)} />)}
+
                                 />
                                 <Route
                                     path="/addArt/cat/:id"
@@ -157,7 +171,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

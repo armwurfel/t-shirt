@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CardHeader from '../../../../utilitiesComponent/cardHeader/CardHeader';
 import Slider from 'rc-slider';
-import Fonts from '../../../../../../src/fonts.json';
+import Fonts from '../../../../../fonts.json';
 import Colors from '../../../../../colors.json';
+import Outline from '../../../../../outline.json';
 import history from '../../../../../history';
 
 import './texttools.css';
@@ -16,14 +17,15 @@ class TextOptions extends Component {
             currentFont: 1,
             fontPath: "",
             value: this.props.value,
-            textColor: this.props.textColor        
+            textColor: this.props.textColor,
+            outlineSize: this.props.outlineSize,
+            outlineColor: this.props.outlineColor
         }
     }
 
     static getDerivedStateFromProps(props, state) {
         return {
             currentFont: props.font,
-            // sliderValueRotation: props.textRotation
         }
     }
 
@@ -40,10 +42,17 @@ class TextOptions extends Component {
           }
        }
     };
-    findColorById = () => {
-        for (var i = 0; i < Object.keys(Colors.data).length; i++) {
-          if (Colors.data[i].Id === parseInt(this.state.textColor)) {
-            return Colors.data[i];
+    findColorById = (data, idToLookFor) => {
+        for (var i = 0; i < Object.keys(data).length; i++) {
+          if (data[i].Id === parseInt(idToLookFor)) {
+            return data[i];
+          }
+       }
+    };
+    findOutlineById = (data, idToLookFor) => {
+        for (var i = 0; i < Object.keys(data).length; i++) {
+          if (data[i].Id === parseInt(idToLookFor)) {
+            return data[i];
           }
        }
     };
@@ -56,7 +65,9 @@ class TextOptions extends Component {
     
     render() {
         const { sliderValueRotation } = this.state;
-        const findColorById = this.findColorById();
+        const findColorById = this.findColorById(Colors.data, this.state.textColor);
+        const findColorOutlineById = this.findColorById(Colors.data, this.state.outlineColor);
+        const findOutlineById = this.findOutlineById(Outline.data, this.state.outlineSize);
         return (
             <div className="card">
                 <CardHeader title="Edit Text" />
@@ -150,7 +161,8 @@ class TextOptions extends Component {
                             })
                         }}
                     >
-                        <div class="iconcardtool-title">Text Color</div><div class="iconcardtool-content">
+                        <div class="iconcardtool-title">Text Color</div>
+                        <div class="iconcardtool-content">
                             <div>{findColorById.ColorName}</div>
                             <div class="colorswatch isdisabled isinert" data-label={findColorById.ColorName}>
                                 <svg viewBox="0 0 10.5 10.5"><defs><mask id="colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 4   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-corner-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 4 3   A 1 1 0 0 1 3 4   L 0 4 " fill="#ffffff" stroke-width="0.5"></path></mask><filter id="colorswatch-dogear-filter-bedba410-c096-4299-8d14-164d2d2ec70e"><feBlend in="SourceGraphic" in2="BackgroundImage" mode="screen"></feBlend></filter></defs><g fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`} stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"><g mask="url(#colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e)" transform="translate(0.25, 0.25)"><path class="colorswatch-primary" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`}></path><path class="colorswatch-secondary" d="   M 6.5 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 6.5 10   Z " fill={`rgb(${findColorById.R}, ${findColorById.G}, ${findColorById.B})`}></path><path class="colorswatch-inset" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#ffffff" stroke-linejoin="miter" stroke-width="2.5"></path><path class="colorswatch-outline" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#cccccc" stroke-width="0.5"></path></g></g>
@@ -172,12 +184,25 @@ class TextOptions extends Component {
                         >
                             <div class="iconcardtool-title">Outline</div>
                             <div class="iconcardtool-content">
-                                <span class="iconcardtool-defaultfont">Add Outline</span>
-                            </div>
-                            <div class="iconcardtool-chevron">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 11.4 20.1"><path d="M10 20.1c-.4 0-.7-.1-1-.4L.4 11c-.3-.2-.4-.6-.4-1s.1-.7.4-1L9 .4c.5-.5 1.4-.5 2 0s.5 1.4 0 2L3.4 10l7.7 7.7c.5.5.5 1.4 0 2-.3.3-.7.4-1.1.4z"></path>
-                                </svg>
-                            </div>
+                            {   
+                                this.state.outlineSize === 0 ?
+                                        <span class="iconcardtool-defaultfont">Add Outline</span>
+                                    :
+                                    <>
+                                        <div>{findColorOutlineById.ColorName}</div>
+                                        <div class="colorswatch isdisabled isinert" data-label={findColorOutlineById.ColorName}>
+                                            <svg viewBox="0 0 10.5 10.5"><defs><mask id="colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 4   Z " fill="#ffffff" stroke="0.25"></path></mask><mask id="colorswatch-dogear-corner-bedba410-c096-4299-8d14-164d2d2ec70e"><path d="   M 4 0   L 4 3   A 1 1 0 0 1 3 4   L 0 4 " fill="#ffffff" stroke-width="0.5"></path></mask><filter id="colorswatch-dogear-filter-bedba410-c096-4299-8d14-164d2d2ec70e"><feBlend in="SourceGraphic" in2="BackgroundImage" mode="screen"></feBlend></filter></defs><g fill={`rgb(${findColorOutlineById.R}, ${findColorOutlineById.G}, ${findColorOutlineById.B})`} stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"><g mask="url(#colorswatch-normal-bedba410-c096-4299-8d14-164d2d2ec70e)" transform="translate(0.25, 0.25)"><path class="colorswatch-primary" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill={`rgb(${findColorOutlineById.R}, ${findColorOutlineById.G}, ${findColorOutlineById.B})`}></path><path class="colorswatch-secondary" d="   M 6.5 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 6.5 10   Z " fill={`rgb(${findColorOutlineById.R}, ${findColorOutlineById.G}, ${findColorOutlineById.B})`}></path><path class="colorswatch-inset" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#ffffff" stroke-linejoin="miter" stroke-width="2.5"></path><path class="colorswatch-outline" d="   M 1 0   L 9 0   A 1 1 0 0 1 10 1   L 10 1   L 10 9   A 1 1 0 0 1 9 10   L 9 10   L 1 10   A 1 1 0 0 1 0 9   L 0 9   L 0 1   A 1 1 0 0 1 1 0   Z " fill="none" stroke="#cccccc" stroke-width="0.5"></path></g></g>
+                                            </svg>
+                                        </div>
+                                        <div class="textoutlinetoggle-pipe "></div>
+                                        <div>{findOutlineById.Size}</div>
+                                    </>
+                            }
+                                    <div class="iconcardtool-chevron">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 11.4 20.1"><path d="M10 20.1c-.4 0-.7-.1-1-.4L.4 11c-.3-.2-.4-.6-.4-1s.1-.7.4-1L9 .4c.5-.5 1.4-.5 2 0s.5 1.4 0 2L3.4 10l7.7 7.7c.5.5.5 1.4 0 2-.3.3-.7.4-1.1.4z"></path>
+                                        </svg>
+                                    </div>
+                                    </div>
                         </div>
                         <div></div>
                     </div>

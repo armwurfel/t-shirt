@@ -6,7 +6,6 @@ class ColorSelection extends Component {
     constructor(props){
         super(props);
         this.state = {
-            colorName: this.props.colorName,
             colorId: this.props.colorId
         }
     }
@@ -77,6 +76,7 @@ class ColorSelection extends Component {
                                                     this.props.handleProductColor && this.props.handleProductColor(color.Id)
                                                     this.props.handleTextColor && this.props.handleTextColor(color.Id)
                                                     this.props.handleArtColor && this.props.handleArtColor(color.Id)
+                                                    this.props.handleOutlineColor && this.props.handleOutlineColor(color.Id)
                                                 }
                                             }
                                         >

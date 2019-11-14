@@ -39,7 +39,7 @@ class Main extends Component {
           artColor: 4,
           textRotation: 0,
           iconRotation: 0,
-          outlineColor: 5,
+          outlineColor: 1,
           outlineSize: 0
         };
       }
@@ -100,7 +100,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools"
-                                    component={() => (<TextTools textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                    component={() => (<TextTools outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
                                 />
                                 <Route
                                     path="/textTools/outline"

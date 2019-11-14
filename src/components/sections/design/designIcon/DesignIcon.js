@@ -3,6 +3,8 @@ import { Rnd } from 'react-rnd';
 import history from '../../../../history';
 import Fonts from '../../../../fonts.json';
 import Colors from '../../../../colors.json';
+import Outline from '../../../../outline.json';
+
 import './designicon.css';
 
 const style = {
@@ -20,12 +22,16 @@ class DesignIcon extends Component {
           height: "auto",
           x: 10,
           y: 10,
-          textColor: this.props.textColor
+          textColor: this.props.textColor,
+          outlineSize: this.props.outlineSize,
+          outlineColor: this.props.outlineColor
         };
       }
       static getDerivedStateFromProps(props, state) {
         return {
-            textColor: props.textColor
+            textColor: props.textColor,
+            outlineSize: props.outlineSize,
+            outlineColor: props.outlineColor
         }
     }
 
@@ -36,15 +42,24 @@ class DesignIcon extends Component {
         }
     }
     };
-    findColorById = () => {
-        for (var i = 0; i < Object.keys(Colors.data).length; i++) {
-          if (Colors.data[i].Id === parseInt(this.state.textColor)) {
-            return Colors.data[i];
+    findOutlineById = (data, idToLookFor) => {
+        for (var i = 0; i < Object.keys(data).length; i++) {
+          if (data[i].Id === parseInt(idToLookFor)) {
+            return data[i];
+          }
+       }
+    };
+    findColorById = (data, idToLookFor) => {
+        for (var i = 0; i < Object.keys(data).length; i++) {
+          if (data[i].Id === parseInt(idToLookFor)) {
+            return data[i];
           }
        }
     };
     render() {
-        const findColorById = this.findColorById();
+        const findColorById = this.findColorById(Colors.data, this.state.textColor);
+        const findColorOutlineById = this.findOutlineById(Colors.data, this.state.outlineColor);
+        const findOutlineById = this.findOutlineById(Outline.data, this.state.outlineSize);
         return (
             <div 
                 onClick={()=>{
@@ -71,7 +86,8 @@ class DesignIcon extends Component {
                     });
                     }}
                 >
-                    <img class="foundryimage" alt="font" draggable="false" src={`//www.customink.com/text/v1/gen?op[fnt]=${this.findFontById( Fonts.data , this.props.font && this.props.font )}&amp;op[ht]=200&amp;op[sf]=13.5&amp;op[txt]=${this.props.TextFrontValue}&amp;op[r]=${findColorById.R}&amp;op[g]=${findColorById.G}&amp;op[b]=${findColorById.B}&amp;op[a]=center&amp;op[ro]=${this.props.textRotation}&amp;op[lr]=false&amp;op[s_r]=0&amp;op[s_g]=0&amp;op[s_b]=0&amp;op[cf]=false&amp;op[ef]=normal&amp;op[efs]=0`} />
+                    {console.log("Size ?" + findOutlineById.Value + findOutlineById.Size)}
+                    <img class="foundryimage" alt="font" draggable="false" src={`//www.customink.com/text/v1/gen?op[fnt]=${this.findFontById( Fonts.data , this.props.font && this.props.font )}&amp;op[ht]=200&amp;op[sf]=13.5&amp;op[txt]=${this.props.TextFrontValue}&amp;op[r]=${findColorById.R}&amp;op[g]=${findColorById.G}&amp;op[b]=${findColorById.B}&amp;op[a]=center&amp;op[ro]=${this.props.textRotation}&amp;op[lr]=false&amp;op[as]=1&op[st]=${findOutlineById.Value}op[s_r]=${findColorOutlineById.R}&amp;op[s_g]=${findColorOutlineById.G}&amp;op[s_b]=${findColorOutlineById.B}&amp;op[cf]=false&amp;op[ef]=normal&amp;op[efs]=0`} />
                 </Rnd>
                 
             </div>

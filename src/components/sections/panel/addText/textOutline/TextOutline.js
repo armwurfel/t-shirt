@@ -9,15 +9,20 @@ class TextOutline extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            sliderValueOutline: 0,
+            sliderValueOutline: this.props.outlineSize,
             colorName: "Black",
-            colorId: 4
+            colorId: 4,
+            outlineColor: this.props.outlineColor
         }
     }
     handleValueOutline = (sliderValueOutline) => {
         this.setState({ sliderValueOutline });
     }
+    handleOutlineChange = () => {
+        this.props.handleOutlineSize(this.state.sliderValueOutline)
+    } 
     render() {
+        const { sliderValueOutline } = this.state;
         return (
             <div className="card">
                 <CardHeader title="Text Outline" back="/textTools" />
@@ -25,7 +30,11 @@ class TextOutline extends Component {
                     <p class="textoutlinecolorpickerlg-thicknesstitle">Choose outline thickness</p>
                     <div class="sliderchrome">
                         <div class="sliderchrome-inputwrapper">
-                            <Slider dots step={20} defaultValue={100} />
+                            <Slider dots={true} min={0} max={5} step={1} 
+                                defaultValue={sliderValueOutline} 
+                                onChange={this.handleValueOutline} 
+                                onAfterChange={this.handleOutlineChange } 
+                            />
                         </div>
                         <div class="sliderchrome-inputlabels">
                             <div>None</div>
@@ -33,7 +42,7 @@ class TextOutline extends Component {
                         </div>
                     </div>
                 </div>
-                <ColorSelection handleTextColor={this.props.handleTextColor} colorName={this.state.colorName} colorId={this.state.colorId}/>
+                <ColorSelection handleOutlineColor={this.props.handleOutlineColor}  colorId={this.state.outlineColor}/>
             </div>
         )
     }

@@ -2,27 +2,33 @@
     "data": [
         {
             "Id": 0,
-            "Size": "None"
+            "Size": "None",
+            "Value": 0
         },
         {
             "Id": 1,
-            "Size": "Very Thin"
+            "Size": "Very Thin",
+            "Value": 1
         },
         {
             "Id": 2,
-            "Size": "Thin"
+            "Size": "Thin",
+            "Value": 1.6
         },
         {
             "Id": 3,
-            "Size": "Medium"
+            "Size": "Medium",
+            "Value": 2.56
         },
         {
             "Id": 4,
-            "Size": "Thick"
+            "Size": "Thick",
+            "Value": 4.1
         },
         {
             "Id": 5,
-            "Size": "Very Thick"
+            "Size": "Very Thick",
+            "Value": 6.55
         }
     ]
 }

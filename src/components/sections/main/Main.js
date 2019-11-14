@@ -38,7 +38,9 @@ class Main extends Component {
           textColor: 5,
           artColor: 4,
           textRotation: 0,
-          iconRotation: 0
+          iconRotation: 0,
+          outlineColor: 5,
+          outlineSize: 0
         };
       }
       handleImageFront = (value) => {
@@ -74,6 +76,12 @@ class Main extends Component {
       handleIconRotation = (value) => {
         this.setState({iconRotation: value})
       }
+      handleOutlineColor = (value) => {
+        this.setState({outlineColor: value})
+      }
+      handleOutlineSize = (value) => {
+        this.setState({outlineSize: value})
+      }
     render() {
         return (
             <section className="main">
@@ -96,7 +104,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools/outline"
-                                    component={TextOutline} 
+                                    component={() => (<TextOutline outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} handleOutlineColor={this.handleOutlineColor.bind(this)} handleOutlineSize={this.handleOutlineSize.bind(this)} />)}
                                 />
                                 <Route
                                     path="/textTools/colors"
@@ -149,7 +157,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

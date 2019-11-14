@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "Id": 0,
+            "Size": "None"
+        },
+        {
+            "Id": 1,
+            "Size": "Very Thin"
+        },
+        {
+            "Id": 2,
+            "Size": "Thin"
+        },
+        {
+            "Id": 3,
+            "Size": "Medium"
+        },
+        {
+            "Id": 4,
+            "Size": "Thick"
+        },
+        {
+            "Id": 5,
+            "Size": "Very Thick"
+        }
+    ]
+}

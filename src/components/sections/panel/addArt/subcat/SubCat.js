@@ -27,7 +27,7 @@ class SubCat extends Component {
                             <span className="clipartlistrow">
                                 <li className="artcategorylist-clipartitem"
                                     onClick={()=>{
-                                        
+                                        this.props.handleArtIconId(cat.Id)
                                     }} 
                                 >
                                     <img src={`/assets/images/artcat/icons/${cat.ArtIconLink}.png`} alt={cat.ArtIconName} />                            

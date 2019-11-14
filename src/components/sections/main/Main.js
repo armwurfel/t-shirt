@@ -37,6 +37,7 @@ class Main extends Component {
           subCatTitle: "",
           productColor: 4,
           textColor: 5,
+          artIconId: 223749,
           artColor: 4,
           textRotation: 0,
           iconRotation: 0,
@@ -64,6 +65,9 @@ class Main extends Component {
       handleSubCatTitle = (id, title) => {
         this.setState({subCatTitle: title, subCatId: id});
       };
+      handleArtIconId = (id) => {
+        this.setState({artIconId: id});
+      }
       handleProductColor = (color) => {
         this.setState({productColor: color})
       }
@@ -146,7 +150,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/addArt/cat/:id/subcat/:id"
-                                    component={() => (<SubCat subCatTitle={this.state.subCatTitle} subCatId={this.state.subCatId} catId={this.state.catId} />)}
+                                    component={() => (<SubCat  handleArtIconId={this.handleArtIconId.bind(this)} subCatTitle={this.state.subCatTitle} subCatId={this.state.subCatId} catId={this.state.catId} />)}
                                 />
                                 <Route
                                     path="/namesAndNumbers"
@@ -171,7 +175,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design artIconId={this.state.artIconId} shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

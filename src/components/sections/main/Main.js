@@ -44,7 +44,10 @@ class Main extends Component {
           outlineColor: 1,
           outlineSize: 0,
           shape: 0,
-          shapeValue: 0
+          shapeValue: 0,
+          iconActiveStatus: 0,
+          iconActiveKey: 0,
+          iconActiveType: 0
         };
       }
       handleImageFront = (value) => {
@@ -94,6 +97,9 @@ class Main extends Component {
       }
       handleShapeValue = (value) => {
         this.setState({shapeValue: value})
+      }
+      handleIconActive = (status, type, key) => {
+        this.setState({iconActiveStatus: status, iconActiveType: type, iconActiveKey: key})
       }
     render() {
         return (
@@ -175,8 +181,8 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design artIconId={this.state.artIconId} shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
-                            <DesignOption productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
+                            <Design iconActiveStatus={this.state.iconActiveStatus} handleIconActive={this.handleIconActive.bind(this)} artIconId={this.state.artIconId} shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <DesignOption iconActiveStatus={this.state.iconActiveStatus} handleIconActive={this.handleIconActive.bind(this)} productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>
                 </Router>

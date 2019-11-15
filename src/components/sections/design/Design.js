@@ -29,19 +29,19 @@ class Design extends Component {
                                 </span>
                             </div>
                             <div className="canvascontainer-pagecontainer-design">
-                                <div className="guideline">
+                                <div className="guideline adult">
                                     <h5 class="guideline-title">adult</h5>
                                 </div>
-                                <div className="guideline">
+                                <div className="guideline chest">
                                     <h5 class="guideline-title">left chest</h5>
                                 </div>
-                                <div className="guideline">
+                                <div className="guideline youth">
                                     <h5 class="guideline-title">youth</h5>
                                 </div>
                                 <div className="design-printablearea">
                                     <div class="design-centerline"></div>
-                                    <DesignIcon type="1" keys="1" shapeValue={this.props.shapeValue} shape={this.props.shape} outlineSize={this.props.outlineSize} outlineColor={this.props.outlineColor} textRotation={this.props.textRotation} textColor={this.props.textColor} font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
-                                    <DesignIconImg artIconId={this.props.artIconId} type="1" keys="1" font={this.props.font} iconRotation={this.props.iconRotation} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIcon iconActiveStatus={this.props.iconActiveStatus} handleIconActive={this.props.handleIconActive} type="1" keys="1" shapeValue={this.props.shapeValue} shape={this.props.shape} outlineSize={this.props.outlineSize} outlineColor={this.props.outlineColor} textRotation={this.props.textRotation} textColor={this.props.textColor} font={this.props.font} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
+                                    <DesignIconImg iconActiveStatus={this.props.iconActiveStatus} handleIconActive={this.props.handleIconActive} type="2" keys="1" artIconId={this.props.artIconId}  font={this.props.font} iconRotation={this.props.iconRotation} handleTextFrontValue={this.handleTextFrontValue} TextFrontValue={this.props.TextFrontValue}/>
                                     {/* <DesignIconImg type="2" keys="2" /> */}
 
                                 </div>

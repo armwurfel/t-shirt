@@ -36,6 +36,8 @@
     border: 1px solid;
     opacity: 0;
     transition: opacity .15s .15s;
+    color: rgb(158, 148, 148);
+    border-color: rgb(158, 148, 148);
 }
 
 .guideline-title h5{
@@ -52,6 +54,8 @@
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     /* user-select: none;
     pointer-events: none; */
 }
@@ -67,11 +71,11 @@
 }
 
 .canvascontainer-pagecontainer-design{
-    width: 12vw;
-    height: 50vh;
-    margin: 20vh auto;
+    width: 20vw;
+    height: 55vh;
+    margin: 15vh auto;
+    position: relative;;
 }
-
 .foundryimage {
     pointer-events: none;
     width: 100%;
@@ -80,7 +84,58 @@
     max-height: 100%;
     display: block;
 }
-
 .product-photo{
     pointer-events: none;
+}
+.react-draggable-transparent-selection .guideline{
+    opacity: 1 !important;
+}
+.guideline.adult {
+    width: 100%;
+    height: 100%;
+}
+.guideline.chest{
+    width: 40%;
+    height: 20%;
+    top: 2.5%;
+    right: 5%;
+    text-align: left;
+}
+.guideline.youth{
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+}
+.design-selection-handle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    margin: -2px;
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    /* cursor: nwse-resize; */
+
+}
+.design-selection-handle.isresize {
+    right: -18px;
+    bottom: -22px;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+}
+.design-selection-handle.isdelete {
+    left: -18px;
+    top: -22px;
+    z-index: 11;
+    user-select: none;
+    pointer-events: none;
+    cursor: pointer;
+}
+.design-selection-handle svg {
+    width: 28px;
+    height: 28px;
 }

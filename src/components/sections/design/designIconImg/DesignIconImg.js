@@ -7,7 +7,7 @@ const style = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    border: "solid 1px #ddd",
+    // border: "solid 1px #ddd",
   };
 
 class DesignIconImg extends Component {
@@ -18,9 +18,14 @@ class DesignIconImg extends Component {
           height: "auto",
           x: 10,
           y: 10,
+          active: this.props.iconActiveStatus
         };
       }
-
+      static getDerivedStateFromProps(props, state) {
+        return {
+            active: props.iconActiveStatus
+        }
+    }
     //   findFontById = (data, idToLookFor) => {
     //     for (var i = 0; i < Object.keys(data).length; i++) {
     //       if (data[i].Id === parseInt(idToLookFor)) {
@@ -33,12 +38,10 @@ class DesignIconImg extends Component {
             <div 
                 onClick={()=>{
                     history.push({
-                        // pathname: `${this.findTypeById(this.state.type)}`
                         pathname: '/artTools'
                     })
+                    this.props.handleIconActive(1, this.props.type, this.props.keys)
                 }}
-                keys={this.state.keys}
-                type={this.state.type}
             >
                 <Rnd
                     style={style}
@@ -48,6 +51,7 @@ class DesignIconImg extends Component {
                     this.setState({ x: d.x, y: d.y });
                     }}
                     bounds=".canvascontainer-pagecontainer-design"
+                    className={this.state.active === 1 ? "active" : ""}
                     lockAspectRatio="100%"
                     
                     onResizeStop={(e, direction, ref, delta, position) => {

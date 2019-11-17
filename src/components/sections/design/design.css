@@ -121,15 +121,15 @@
 
 }
 .design-selection-handle.isresize {
-    right: -18px;
-    bottom: -22px;
-    z-index: -1;
+    right: -24px;
+    bottom: -26px;
+    z-index: 1;
     user-select: none;
     pointer-events: none;
 }
 .design-selection-handle.isdelete {
-    left: -18px;
-    top: -22px;
+    left: -24px;
+    top: -26px;
     z-index: 11;
     user-select: none;
     pointer-events: none;
@@ -138,4 +138,49 @@
 .design-selection-handle svg {
     width: 28px;
     height: 28px;
+}
+.design-selection {
+    z-index: -1;
+}
+.react-draggable.active .design-selection::after {
+    visibility: visible;
+}
+.design-selection::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    border: 2px solid;
+    box-sizing: content-box;
+    pointer-events: none;
+    visibility: hidden;
+}
+.react-draggable:hover .design-selection::after {
+    border: 1px dashed;
+    visibility: visible;
+}
+.react-draggable.active:hover .design-selection::after {
+    border: 2px solid;
+}
+
+.corner-handle.bottom-left, .corner-handle.right, .corner-handle.top, .corner-handle.bottom, .corner-handle.left, .corner-handle.top-left, .corner-handle.top-right{
+    display: none;
+}
+
+.corner-handle.bottom-right{
+    width: 28px !important;
+    height: 28px !important;
+    right: -26px !important;
+    bottom: -28px !important;
+    border-radius: 90px !important;
+}
+
+.react-draggable.active[style*="user-select: none;"] .design-selection, .react-draggable-dragging.active .design-selection, .react-draggable-dragging.active .design-selection::after {
+    visibility: hidden !important;
+}
+.react-draggable.active[style*="user-select: none;"] .design-selection::after,  .react-draggable-dragging.active{
+    border: 1px dashed !important;
 }

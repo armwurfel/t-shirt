@@ -13,13 +13,19 @@ class TextOptions extends Component {
             currentFont: 1,
             fontPath: "",
             value: this.props.value,
-            singleColor: false
+            singleColor: false,
+            iconCenter: this.props.iconCenter,
+            iconActiveKey: this.props.iconActiveKey,
+            iconActiveType: this.props.iconActiveType,
         }
     }
 
     static getDerivedStateFromProps(props, state) {
         return {
-            currentFont: props.font
+            currentFont: props.font,
+            iconCenter: props.iconCenter,
+            iconActiveKey: props.iconActiveKey,
+            iconActiveType: props.iconActiveType
         }
     }
 
@@ -54,7 +60,9 @@ class TextOptions extends Component {
                         <div className="utilitytools-row">
                             <div className="toolsmenu centeringtool">
                                 <div className="toolsmenu-buttons">
-                                    <div className="toolsmenubutton isdisabled">
+                                    <div className={this.state.iconCenter === true ? "toolsmenubutton isdisabled" : "toolsmenubutton"}
+                                            onClick={() => {this.props.handleIconCenter()}}
+                                        >
                                         <svg id="_17-center" data-name="17-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.98 38.98"><path className="cls-1" d="M18.49 10.1h2v18.79h-2z"></path><path className="cls-1" d="M28.37 24.37l-4.88-4.88 4.88-4.88 1.42 1.41-3.47 3.47 3.47 3.47-1.42 1.41z"></path><path className="cls-1" d="M10.61 14.61l4.88 4.88-4.88 4.88-1.41-1.41 3.46-3.47-3.46-3.47 1.41-1.41z"></path>
                                         </svg>
                                     </div>

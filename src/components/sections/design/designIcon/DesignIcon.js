@@ -30,7 +30,8 @@ class DesignIcon extends Component {
           outlineColor: this.props.outlineColor,
           shape: this.props.shape,
           shapeValue: this.props.shapeValue,
-          active: this.props.iconActiveStatus
+          active: this.props.iconActiveStatus,
+          textCenter: this.props.textCenter
         };
       }
       static getDerivedStateFromProps(props, state) {
@@ -40,7 +41,8 @@ class DesignIcon extends Component {
             outlineColor: props.outlineColor,
             shape: props.shape,
             shapeValue: props.shapeValue,
-            active: props.iconActiveStatus
+            active: props.iconActiveStatus,
+            textCenter: props.textCenter
         }
     }
 
@@ -104,6 +106,7 @@ class DesignIcon extends Component {
                     this.props.handleIconActive(1, this.props.type, this.props.keys)
                 }}
             >
+              {/* || this.props.textCenter  === true ? 50 : this.state.x  */}
                 <Rnd
                     style={style}
                     size={{ width: this.state.width, height: this.state.height }}

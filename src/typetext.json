@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "Id": 1,
+            "Type": 1,
+            "sliderValueRotation": 0,
+            "currentFont": 1,
+            "fontPath": "",
+            "value": "",
+            "singleColor": 0,
+            "center": false,
+            "iconActiveKey": 1,
+            "iconActiveType": 1
+        }
+    ]
+}

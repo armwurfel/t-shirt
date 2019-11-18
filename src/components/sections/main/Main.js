@@ -47,7 +47,9 @@ class Main extends Component {
           shapeValue: 0,
           iconActiveStatus: 0,
           iconActiveKey: 0,
-          iconActiveType: 0
+          iconActiveType: 0,
+          iconCenter: false,
+          textCenter: false
         };
       }
       handleImageFront = (value) => {
@@ -101,6 +103,12 @@ class Main extends Component {
       handleIconActive = (status, type, key) => {
         this.setState({iconActiveStatus: status, iconActiveType: type, iconActiveKey: key})
       }
+      handleIconCenter = () =>{
+        this.setState({iconCenter: true})
+      }
+      handleTextCenter = () =>{
+        this.setState({textCenter: true})
+      }
     render() {
         return (
             <section className="main">
@@ -119,7 +127,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools"
-                                    component={() => (<TextTools shape={this.state.shape} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                    component={() => (<TextTools iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} textCenter={this.state.textCenter} handleTextCenter={this.handleTextCenter.bind(this)} shape={this.state.shape} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
                                 />
                                 <Route
                                     path="/textTools/outline"
@@ -139,7 +147,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/artTools"
-                                    component={() => (<ArtTools iconRotation={this.state.iconRotation} handleIconRotation={this.handleIconRotation.bind(this)} />)}
+                                    component={() => (<ArtTools iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} iconCenter={this.state.iconCenter} handleIconCenter={this.handleIconCenter.bind(this)} iconRotation={this.state.iconRotation} handleIconRotation={this.handleIconRotation.bind(this)} />)}
                                 />
                                 <Route
                                     path="/artTools/colors"
@@ -181,7 +189,7 @@ class Main extends Component {
                             </div>
                         </div>
                         <div className="canvas-container">
-                            <Design iconActiveStatus={this.state.iconActiveStatus} iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} handleIconActive={this.handleIconActive.bind(this)} artIconId={this.state.artIconId} shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
+                            <Design iconCenter={this.state.iconCenter} textCenter={this.state.textCenter} iconActiveStatus={this.state.iconActiveStatus} iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} handleIconActive={this.handleIconActive.bind(this)} artIconId={this.state.artIconId} shape={this.state.shape} shapeValue={this.state.shapeValue} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} iconRotation={this.state.iconRotation} textRotation={this.state.textRotation} productColor={this.state.productColor} textColor={this.state.textColor} handleTextFrontValue={this.handleTextFrontValue.bind(this)} font={this.state.font} TextFrontValue={this.state.value} front={this.state.front} back={this.state.back}/>
                             <DesignOption iconActiveStatus={this.state.iconActiveStatus} handleIconActive={this.handleIconActive.bind(this)} productColor={this.state.productColor} handleImageBack={this.handleImageBack.bind(this)} handleImageFront={this.handleImageFront.bind(this)} front={this.state.front} back={this.state.back} />
                         </div>
                     </div>

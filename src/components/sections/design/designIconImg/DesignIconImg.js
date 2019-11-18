@@ -20,12 +20,14 @@ class DesignIconImg extends Component {
           height: "auto",
           x: 10,
           y: 10,
-          active: this.props.iconActiveStatus
+          active: this.props.iconActiveStatus,
+          iconCenter: this.props.iconCenter
         };
       }
       static getDerivedStateFromProps(props, state) {
         return {
-            active: props.iconActiveStatus
+            active: props.iconActiveStatus,
+            iconCenter: props.iconCenter
         }
     }
     //   findFontById = (data, idToLookFor) => {

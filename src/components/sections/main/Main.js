@@ -49,7 +49,7 @@ class Main extends Component {
           iconActiveKey: 0,
           iconActiveType: 0,
           iconCenter: false,
-          textCenter: false
+          textCenter: false,
         };
       }
       handleImageFront = (value) => {
@@ -127,7 +127,7 @@ class Main extends Component {
                                 />
                                 <Route
                                     path="/textTools"
-                                    component={() => (<TextTools iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} textCenter={this.state.textCenter} handleTextCenter={this.handleTextCenter.bind(this)} shape={this.state.shape} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)} />)}
+                                    component={() => (<TextTools iconActiveKey={this.state.iconActiveKey} iconActiveType={this.state.iconActiveType} textCenter={this.state.textCenter} handleTextCenter={this.handleTextCenter.bind(this)} shape={this.state.shape} outlineSize={this.state.outlineSize} outlineColor={this.state.outlineColor} textRotation={this.state.textRotation} handleTextRotation={this.handleTextRotation.bind(this)} textColor={this.state.textColor} value={this.state.value} font={this.state.font} handleTextFrontValue={this.handleTextFrontValue.bind(this)}  />)}
                                 />
                                 <Route
                                     path="/textTools/outline"

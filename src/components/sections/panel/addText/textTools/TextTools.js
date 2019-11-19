@@ -25,6 +25,7 @@ class TextOptions extends Component {
             textCenter: this.props.textCenter,
             iconActiveKey: this.props.iconActiveKey,
             iconActiveType: this.props.iconActiveType,
+            textFocus: true,
         }
     }
 
@@ -72,11 +73,18 @@ class TextOptions extends Component {
        }
     };
     handleChangeText = (e) => {
+
+        console.log(e.target.value)
         this.setState({
-            value: e.target.value
+            value: e.target.value,
+        }, () => {
+            console.log('Text Typed :: ' + this.state.value)
+            
         });
         this.props.handleTextFrontValue(e.target.value)
     }
+
+    
     
     render() {
         const { sliderValueRotation } = this.state;
@@ -92,10 +100,10 @@ class TextOptions extends Component {
                         <div className="textinput">
                             <label className="textinput-textarea-container">
                                 <textarea className="textinput-textarea"
-                                 onChange={    
-                                    this.handleChangeText
+                                 onChange={
+                                    this.handleChangeText 
                                 } 
-                                name="value" value={this.state.value} placeholder="Enter text here" rows="1" type="text">
+                                name="value" key={Math.random()} value={this.state.value} placeholder="Enter text here" rows="1" type="text" >
                                 </textarea>
                             </label>
                         </div>
@@ -103,7 +111,7 @@ class TextOptions extends Component {
                     <div className="utilitytools">
                         <div className="utilitytools-row">
                             <div className="toolsmenu centeringtool">
-                                <div className="toolsmenu-buttons">
+                                <div className="toolsmenu-buttons"> 
                                     <div className={this.state.textCenter === true ? "toolsmenubutton isdisabled" : "toolsmenubutton"}
                                         onClick={() => {this.props.handleTextCenter()}}
                                     >

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "459bf126fd9a17b1ff2ed3fcb91d982d",
+    "revision": "862d9d4fd5a2c00b09523ef62f46075c",
     "url": "/t-shirt/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/t-shirt/static/css/2.96479aa2.chunk.css"
   },
   {
-    "revision": "9251e67c3f43116d229a",
+    "revision": "64e5ca2e7032226799ac",
     "url": "/t-shirt/static/css/main.1e40f5ce.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/t-shirt/static/js/2.6757923d.chunk.js"
   },
   {
-    "revision": "9251e67c3f43116d229a",
-    "url": "/t-shirt/static/js/main.7d2a0f1e.chunk.js"
+    "revision": "64e5ca2e7032226799ac",
+    "url": "/t-shirt/static/js/main.15dc02a8.chunk.js"
   },
   {
     "revision": "450e5c36be590dd35cf9",
